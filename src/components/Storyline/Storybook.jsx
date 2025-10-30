@@ -1,16 +1,18 @@
-import { useRef, useEffect } from "react";
-import gsap from "gsap";
+import "./Storybook.css";
+import { useRef} from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Parallax, ParallaxLayer } from "@react-spring/parallax";
-import "./Storybook.css";
+import gsap from "gsap";
 import Hero from "../Hero/Hero";
 import About from "../About/About";
+import Banner from "../Banner/Banner";
 import Geogrophy from "../Geography/Geography";
 import Education from "../Education/Education";
 import Professional from "../Professional/Professional";
 import Today from "../Today/Today";
 import Clouds from "../Clouds/Clouds";
+import TV from "../TV/TV";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
@@ -162,7 +164,7 @@ const Storybook = () => {
 
 					{/* <<<<<<<<<< TV >>>>>>>>> */}
 					<ParallaxLayer offset={4} speed={0.3} factor={0.3}>
-						<TV />
+						{TV.TV1()}
 					</ParallaxLayer>
 
 					{/* <<<<<<<<<< Education >>>>>>>>> */}
@@ -187,7 +189,7 @@ const Storybook = () => {
 
 					{/* <<<<<<<<<< Projects >>>>>>>>> */}
 					<ParallaxLayer offset={7.4} speed={0.3} factor={0.5}>
-						<TV2 />
+						{TV.TV2()}
 					</ParallaxLayer>
 					<footer className=" footer-scene center">
 						<small className="pinstripe">Storybook</small>
@@ -198,15 +200,6 @@ const Storybook = () => {
 	);
 };
 
-const Banner = () => {
-	return (
-		<div className="banner-container">
-			<h1 className="audioFont banner">
-				Lorem, ipsum dolor sit consecte earum!
-			</h1>
-		</div>
-	);
-};
 const Biker = () => {
 	return (
 		<div className="biker">
@@ -223,83 +216,6 @@ const Biker = () => {
 	);
 };
 
-const TV = () => {
-	return (
-		<div className="tv">
-			<img
-				src={`${process.env.PUBLIC_URL}/images/onStage.gif`}
-				alt=""
-				style={{
-					position: "relative",
-					height: "6rem",
-					width: "6rem",
-					transform: "translateY(-35vh)",
-				}}
-			/>
-
-			<hr />
-			<img
-				src={`${process.env.PUBLIC_URL}/images/onStage.gif`}
-				alt=""
-				style={{
-					position: "relative",
-					height: "6rem",
-					width: "6rem",
-					transform: "translateY(-35vh)",
-				}}
-			/>
-			<hr />
-			<img
-				src={`${process.env.PUBLIC_URL}/images/onStage.gif`}
-				alt=""
-				style={{
-					position: "relative",
-					height: "6rem",
-					width: "6rem",
-					transform: "translateY(-35vh)",
-				}}
-			/>
-		</div>
-	);
-};
-const TV2 = () => {
-	return (
-		<div className="tv">
-			<img
-				src={`${process.env.PUBLIC_URL}/images/retroTV.png`}
-				alt=""
-				style={{
-					position: "relative",
-					height: "7rem",
-					width: "7rem",
-					transform: "translateY(-70vh)",
-				}}
-			/>
-
-			<img
-				src={`${process.env.PUBLIC_URL}/images/retroTV.png`}
-				alt=""
-				style={{
-					position: "relative",
-					height: "7rem",
-					width: "7rem",
-					transform: "translateY(-70vh)",
-				}}
-			/>
-
-			<img
-				src={`${process.env.PUBLIC_URL}/images/retroTV.png`}
-				alt=""
-				style={{
-					position: "relative",
-					height: "7rem",
-					width: "7rem",
-					transform: "translateY(-70vh)",
-				}}
-			/>
-		</div>
-	);
-};
 const Polariod = () => {
 	return (
 		<div
