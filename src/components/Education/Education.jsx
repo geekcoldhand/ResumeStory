@@ -1,3 +1,5 @@
+import Banner from "../Banner/Banner";
+
 export default function Education() {
 	return (
 		<section className="scene education-scene center">
@@ -53,6 +55,8 @@ export default function Education() {
 					sunt blanditiis, architecto vero sed!
 				</p>
 			</div>
+
+			<Banner />
 		</section>
 	);
 }

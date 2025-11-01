@@ -11,7 +11,7 @@ export default class TV extends React.Component {
 						position: "relative",
 						height: "6rem",
 						width: "6rem",
-						transform: "translateY(-35vh)",
+						transform: "translateY(5vh)",
 					}}
 				/>
 
@@ -23,7 +23,7 @@ export default class TV extends React.Component {
 						position: "relative",
 						height: "6rem",
 						width: "6rem",
-						transform: "translateY(-35vh)",
+						transform: "translateY(5vh)",
 					}}
 				/>
 				<hr />
@@ -34,7 +34,7 @@ export default class TV extends React.Component {
 						position: "relative",
 						height: "6rem",
 						width: "6rem",
-						transform: "translateY(-35vh)",
+						transform: "translateY(5vh)",
 					}}
 				/>
 			</div>
@@ -51,7 +51,7 @@ export default class TV extends React.Component {
 						position: "relative",
 						height: "7rem",
 						width: "7rem",
-						transform: "translateY(-70vh)",
+						transform: "translateY(7vh)",
 					}}
 				/>
 
@@ -62,7 +62,7 @@ export default class TV extends React.Component {
 						position: "relative",
 						height: "7rem",
 						width: "7rem",
-						transform: "translateY(-70vh)",
+						transform: "translateY(7vh)",
 					}}
 				/>
 
@@ -73,7 +73,7 @@ export default class TV extends React.Component {
 						position: "relative",
 						height: "7rem",
 						width: "7rem",
-						transform: "translateY(-70vh)",
+						transform: "translateY(7vh)",
 					}}
 				/>
 			</div>

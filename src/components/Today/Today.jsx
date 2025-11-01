@@ -1,7 +1,9 @@
+import TV from "../TV/TV";
+
 export default function Today() {
 	return (
 		<section className="scene today-scene center">
-			<div className="today-panel ">
+			<div className="today-panel center">
 				<div className="chapter center">
 					<hr />
 					<h2 className="audioFont xxxl" style={{ color: "aliceblue" }}>
@@ -42,6 +44,7 @@ export default function Today() {
 					learning, teaching, and discussing new technologies.
 				</p>
 			</div>
+			{TV.TV2()}
 		</section>
 	);
 }

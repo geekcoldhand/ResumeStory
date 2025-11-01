@@ -1,6 +1,16 @@
+import TV from "../TV/TV";
+
+
 export default function Geography() {
 	return (
 		<section id="early-life" className="scene center">
+			<div className="chapter center">
+				<hr />
+				<h2 className="audioFont xxxl">
+					Lorem ipsum dolor sit, amet consectetur
+				</h2>
+				<hr />
+			</div>
 			<p className="storyaParagraph">
 				<div
 					className="right-container"
@@ -15,7 +25,6 @@ export default function Geography() {
 							width: "180px",
 							borderRadius: "50%",
 							shapeOutside: "circle(50%)",
-							
 						}}
 					/>
 				</div>
@@ -35,6 +44,8 @@ export default function Geography() {
 				environments. Diversity and collaboration gravitate me the most toward
 				programming.
 			</p>
+
+				{TV.TV1()}
 		</section>
 	);
 }

@@ -6,12 +6,12 @@ export default function Professional() {
 				<div
 					style={{
 						width: "auto",
-						height: "20vh",
+						
 						paddingBottom: "2rem",
 						marginBlock: "2rem",
 					}}
 				>
-					<img src={`${process.env.PUBLIC_URL}/images/hiMyName.png`} alt="" style={{ width: "45vw", height: "auto" }}/>
+					<img src={`${process.env.PUBLIC_URL}/images/hiMyName.png`} alt="" style={{ width: "35vw", height: "auto" }}/>
 				</div>
 				<p className="storyaParagraph">
 					As a Senior Software Engineer at Accenture, I serve as a subject

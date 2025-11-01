@@ -8,7 +8,11 @@ export default class Clouds extends React.Component {
 				className="cloud"
 				src={this.source}
 				alt=""
-				style={{ transform: "translateY(60vh) translateX(0vw)" }}
+				style={{
+					transform: "translateY(30vh) translateX(20vw)",
+					height: "10rem",
+					width: "30rem",
+				}}
 			/>
 		);
 	};

@@ -1,12 +1,10 @@
 import "./Storybook.css";
-import { useRef} from "react";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import gsap from "gsap";
 import Hero from "../Hero/Hero";
 import About from "../About/About";
-import Banner from "../Banner/Banner";
 import Geogrophy from "../Geography/Geography";
 import Education from "../Education/Education";
 import Professional from "../Professional/Professional";
@@ -14,188 +12,85 @@ import Today from "../Today/Today";
 import Clouds from "../Clouds/Clouds";
 import TV from "../TV/TV";
 
-gsap.registerPlugin(ScrollTrigger, useGSAP);
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Storybook = () => {
-	const parallaxRef = useRef(null);
+	const cloudRef = useRef(null);
 	const rootRef = useRef(null);
-	const progressRef = useRef(null);
 
-	useGSAP(() => {
-		const triggerEl = parallaxRef.current?.container?.current;
-		if (!triggerEl) return;
-
-		ScrollTrigger.create({
-			trigger: parallaxRef.current.container.current,
-			scroller: parallaxRef.current.container.current,
-			start: "top top",
-			end: "bottom bottom",
-			scrub: true,
-			onUpdate: (self) => {
-				gsap.to(progressRef.current, {
-					scaleX: self.progress,
-					duration: 0.1,
-					ease: "none",
-				});
-			},
-		});
-	});
+	useGSAP(
+		() => {
+			gsap.to(cloudRef.current, {
+				x: -100 * 2,
+				ease: "",
+				scrollTrigger: {
+					//markers: true,
+					trigger: cloudRef.current,
+					 scroll: cloudRef.current,
+					start: "top center", // starts when cloud is near middle of view
+					end: "bottom+=80 center",
+					scrub: true,
+				},
+			});
+		},
+		{ scope: rootRef }
+	);
 
 	return (
 		<>
 			<div className="progress-container">
-				<div className="progress-bar" ref={progressRef}></div>
+				<div className="progress-bar"></div>
 			</div>
 
-			<Parallax pages={7.5} ref={parallaxRef}>
-				<div ref={rootRef} className="storybook-root">
-					<div className="bg-layer">
-						<div
-							className="bg-image"
-							role="img"
-							aria-label="placeholder background"
-						/>
-					</div>
+			<div ref={rootRef} className="storybook-root">
+				<div className="bg-layer"></div>
+				<Hero />
 
-					{/* <<<<<<<<< Hero >>>>>>>>>  */}
-					<ParallaxLayer
-						offset={0}
-						speed={0.5}
-						factor={0.5}
-						style={{ zIndex: 10 }}
-					>
-						<Hero />
-					</ParallaxLayer>
-
-					{/* <<<<<<<<< Clouds >>>>>>>>  */}
-					<ParallaxLayer offset={0} speed={1.5} factor={0.1} horizontal={true}>
-						{/* <Cloud1 /> */}
-						{Clouds.Cloud1()}
-					</ParallaxLayer>
-					<ParallaxLayer
-						offset={0.1}
-						speed={-1.5}
-						factor={0.1}
-						horizontal={true}
-					>
-						{Clouds.Cloud2()}
-					</ParallaxLayer>
-					<ParallaxLayer offset={0} speed={-1.5} factor={0.1} horizontal={true}>
-						{Clouds.Cloud3()}
-					</ParallaxLayer>
-					<ParallaxLayer offset={0} speed={-1.5} factor={0.1} horizontal={true}>
-						{Clouds.Cloud4()}
-					</ParallaxLayer>
-					<ParallaxLayer offset={0} speed={-1.5} factor={0.1} horizontal={true}>
-						{Clouds.Cloud5()}
-					</ParallaxLayer>
-					<ParallaxLayer offset={0} speed={1.5} factor={0.1} horizontal={true}>
-						{Clouds.Cloud6()}
-					</ParallaxLayer>
-					<ParallaxLayer offset={0} speed={1.5} factor={0.1} horizontal={true}>
-						{Clouds.Cloud7()}
-					</ParallaxLayer>
-
-					{/* <<<<<<<<<< Train Animaiton >>>>>>>>>> */}
-					<ParallaxLayer
-						offset={0.9}
-						speed={-1.8}
-						factor={1}
-						horizontal={true}
-						style={{ zIndex: 10 }}
-					>
-						<Train />
-					</ParallaxLayer>
-
-					{/*  <<<<<<<<<<<< City >>>>>>>>>>>>> */}
-					<ParallaxLayer
-						offset={0.9}
-						speed={.1}
-						factor={0.3}
-						style={{ zIndex: 1 }}
-					>
-						<City />
-					</ParallaxLayer>
-					{/* <<<<<<<<<< About >>>>>>>>> */}
-					<ParallaxLayer offset={1} speed={0.5} factor={1}>
-						<About />
-					</ParallaxLayer>
-
-					{/* <<<<<<<<<<< Polariod >>>>>>>>> */}
-					<ParallaxLayer
-						offset={2.2}
-						speed={0.5}
-						factor={1}
-						style={{ zIndex: 1 }}
-					>
-						<div className="center">
-							<Polariod />
-						</div>
-					</ParallaxLayer>
-
-					{/* <<<<<<<<<<<<< Geography >>>>>>>>> */}
-					<ParallaxLayer offset={2.8} speed={0.5} factor={0.5}>
-						<section className="scene geography-scene center">
-							<div className="chapter">
-								<hr />
-								<h2 className="audioFont xxxl">
-									Lorem ipsum dolor sit, amet consectetur
-								</h2>
-								<hr />
-							</div>
-						</section>
-					</ParallaxLayer>
-
-					{/* <<<<<<<<<<<<< Geography >>>>>>>>> */}
-					<ParallaxLayer offset={3} speed={0.3} factor={1}>
-						<Geogrophy />
-					</ParallaxLayer>
-
-					{/* <<<<<<<<<<<<< Biker >>>>>>>>> */}
-					<ParallaxLayer
-						offset={4.9}
-						speed={-1.1}
-						factor={0.1}
-						horizontal={true}
-						style={{ zIndex: 10 }}
-					>
-						<Biker />
-					</ParallaxLayer>
-
-					{/* <<<<<<<<<< TV >>>>>>>>> */}
-					<ParallaxLayer offset={4} speed={0.3} factor={0.3}>
-						{TV.TV1()}
-					</ParallaxLayer>
-
-					{/* <<<<<<<<<< Education >>>>>>>>> */}
-					<ParallaxLayer offset={4} speed={0.3} factor={1}>
-						<Education />
-					</ParallaxLayer>
-
-					{/* <<<<<<<<<< Banner  >>>>>>>>> */}
-					<ParallaxLayer offset={5.1} speed={0.3} factor={0.3}>
-						<Banner />
-					</ParallaxLayer>
-
-					{/* <<<<<<<<<< Professional >>>>>>>>> */}
-					<ParallaxLayer offset={5} speed={0.3} factor={1}>
-						<Professional />
-					</ParallaxLayer>
-
-					{/* <<<<<<<<<< Today >>>>>>>>> */}
-					<ParallaxLayer offset={6} speed={0.3} factor={1}>
-						<Today />
-					</ParallaxLayer>
-
-					{/* <<<<<<<<<< Projects >>>>>>>>> */}
-					<ParallaxLayer offset={7.4} speed={0.3} factor={0.5}>
-						{TV.TV2()}
-					</ParallaxLayer>
-					<footer className=" footer-scene center">
-						<small className="pinstripe">Storybook</small>
-					</footer>
+				<div ref={cloudRef} style={{ width: "100%" }}>
+					<img
+						className="cloud"
+						src="./images/drawnClouds.png"
+						alt=""
+						style={{
+							transform: "translateY(0vh) translateX(10vw)",
+							height: "10rem",
+							width: "18rem",
+						}}
+					/>
 				</div>
-			</Parallax>
+
+				{/* <ParallaxLayer offset={0.1} speed={-1.5} factor={0.1} horizontal={true}>
+					{Clouds.Cloud2()}
+				</ParallaxLayer>
+				<ParallaxLayer offset={0} speed={-1.5} factor={0.1} horizontal={true}>
+					{Clouds.Cloud3()}
+				</ParallaxLayer>
+				<ParallaxLayer offset={0} speed={-1.5} factor={0.1} horizontal={true}>
+					{Clouds.Cloud4()}
+				</ParallaxLayer>
+				<ParallaxLayer offset={0} speed={-1.5} factor={0.1} horizontal={true}>
+					{Clouds.Cloud5()}
+				</ParallaxLayer>
+				<ParallaxLayer offset={0} speed={1.5} factor={0.1} horizontal={true}>
+					{Clouds.Cloud6()}
+				</ParallaxLayer>
+				<ParallaxLayer offset={0} speed={1.5} factor={0.1} horizontal={true}>
+					{Clouds.Cloud7()}
+				</ParallaxLayer> */}
+
+				<City />
+				<Train />
+				<About />
+				<Geogrophy />
+				<Biker />
+				<Education />
+				<Professional />
+				<Today />
+
+				<footer className=" footer-scene center">
+					<small className="pinstripe">Storybook</small>
+				</footer>
+			</div>
 		</>
 	);
 };
@@ -216,26 +111,7 @@ const Biker = () => {
 	);
 };
 
-const Polariod = () => {
-	return (
-		<div
-			style={{
-				width: "100%",
-				height: "75vh",
-				border: "10px solid white",
-				transform: "translateY(10vh) translateX(0vw)",
-				maxWidth: "400px",
-			}}
-			className="polariod"
-		>
-			<img
-				src={`${process.env.PUBLIC_URL}/images/rampTest.gif`}
-				alt=""
-				style={{ height: "100%", zIndex: 0, width: "100%", objectFit: "cover" }}
-			/>
-		</div>
-	);
-};
+
 
 const City = () => {
 	return (
@@ -259,7 +135,7 @@ const Train = () => {
 			alt=""
 			style={{
 				height: "4rem",
-				transform: "translateY(95vh) translateX(-480vw)",
+				transform: "translateY(vh) translateX(-0vw)",
 			}}
 		/>
 	);

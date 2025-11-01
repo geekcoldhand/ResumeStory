@@ -80,6 +80,29 @@ export default function About() {
 				natus corrupti, voluptates pariatur voluptatibus debitis?
 			</p>
 			<br />
+			<Polariod />
 		</section>
 	);
 }
+
+
+const Polariod = () => {
+	return (
+		<div
+			style={{
+				width: "100%",
+				height: "75vh",
+				border: "10px solid white",
+				transform: "translateY(10vh) translateX(0vw)",
+				maxWidth: "400px",
+			}}
+			className="polariod"
+		>
+			<img
+				src={`${process.env.PUBLIC_URL}/images/rampTest.gif`}
+				alt=""
+				style={{ height: "100%", zIndex: 0, width: "100%", objectFit: "cover" }}
+			/>
+		</div>
+	);
+};
