@@ -1,6 +1,6 @@
 export default function Hero() {
 	return (
-		<section className="scene hero-scene center">
+		<section className="scene hero-scene center" >
 			<div className="hero-content center">
 				<div
 					className=" circle-border"
@@ -35,6 +35,36 @@ export default function Hero() {
 					</h1>
 				</div>
 			</div>
+			<City />
+			<Train />
 		</section>
 	);
 }
+
+const City = () => {
+	return (
+		<>
+			<img
+				src={`${process.env.PUBLIC_URL}/images/buckhead.png`}
+				alt=""
+				style={{
+					height: "29vw",
+					transform: "translateY(30vh) translateX(-10vw)",
+				}}
+			/>
+		</>
+	);
+};
+
+const Train = () => {
+	return (
+		<img
+			src={`${process.env.PUBLIC_URL}/images/marta.png`}
+			alt=""
+			style={{
+				height: "4rem",
+				transform: "translateY(30vh) translateX(-152vw)",
+			}}
+		/>
+	);
+};

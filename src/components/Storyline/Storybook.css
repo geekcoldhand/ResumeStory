@@ -7,25 +7,15 @@
 	--c5: #2f5586;
 	--c6: #1b376f;
 	--c1-mono: #b0c4e8;
-	--c-compliment: #7aad90;
+	--c-compliment: #6f3f1b;
 	--c-accent: #bc4a43;
 	--bg: linear-gradient(
-		180deg,
-		var(--c1),
-		var(--c2),
-		var(--c3),
-		var(--c4),
-		var(--c5),
-		var(--c6)
-	);
-	--bg: linear-gradient(
-		180deg,
+		50deg,
 		var(--c1),
 		#eaeaea,
-		var(--c1),
+		rgb(255, 255, 196),
 		#eaeaea,
-		var(--c2),
-		#eaeaea
+		var(--c1)
 	);
 	--audio-font: "Audiowide", sans-serif;
 	--helv-font: "Helvetica", sans-serif;
@@ -48,6 +38,7 @@ html,
 	height: 100%;
 }
 .storybook-root {
+	position: relative;
 	font-family: "Helvetica", sans-serif;
 	color: var(--c6);
 	overflow-x: hidden;
@@ -57,7 +48,7 @@ html,
 
 .scene {
 	min-height: 100vh;
-	padding: 0.5rem 1rem;
+	padding: 3.5rem 1rem;
 }
 
 .chapter {
@@ -69,7 +60,7 @@ html,
 }
 
 hr {
-	background-color: var(--c6);
+	background: var(--c6);
 	width: 3px;
 	border: none;
 }
@@ -81,7 +72,7 @@ hr {
 	text-align: center;
 }
 .progress-container {
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -196,22 +187,6 @@ hr {
 	max-width: 500px;
 }
 
-.bg-layer {
-	position: fixed;
-	inset: 0;
-	width: 100vw;
-	z-index: -2;
-	overflow-x: hidden;
-	/* background: var(--bg); */
-}
-.bg-image {
-	position: absolute;
-	inset: -10% 0;
-	background-position: center center;
-	transform-origin: center center;
-	will-change: transform;
-}
-
 .hero-scene .hero-content {
 	max-width: 820px;
 	text-align: center;
@@ -224,6 +199,9 @@ hr {
 .hero-name {
 	font-size: 2.6rem;
 	display: inline-block;
+}
+.hero-scene {
+	background: var(--bg);
 }
 .pinstripe {
 	font-family: "Verdana", sans-serif;
@@ -248,8 +226,8 @@ hr {
 }
 
 .footer-scene {
-	/* position: absolute; */
-	bottom: 0;
+	position: absolute;
+	bottom: 10;
 	left: 0;
 	width: 100%;
 	padding: 1rem;

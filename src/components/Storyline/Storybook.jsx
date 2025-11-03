@@ -21,8 +21,8 @@ const Storybook = () => {
 		() => {
 			const clouds = gsap.utils.toArray(".cloud");
 			clouds.forEach((cloud, index) => {
-				const direction = index === 0 ? -150 : 150;
-				
+				const direction = index % 2 === 0 ? 150 : -150;
+
 				gsap.to(cloud, {
 					x: direction,
 					ease: "none",
@@ -32,8 +32,8 @@ const Storybook = () => {
 						start: "top center",
 						end: "bottom center",
 						scrub: 1,
-						markers: false
-					}
+						markers: false,
+					},
 				});
 			});
 		},
@@ -45,28 +45,17 @@ const Storybook = () => {
 			<div className="progress-container">
 				<div className="progress-bar"></div>
 			</div>
-
-			<div
-				style={{
-					width: "100%",
-					position: "relative",
-				}}
-			>
-				<Hero />
-				<Clouds />
-				<City />
-				<Train />
-				<About />
-				<Geogrophy />
-				<Biker />
-				<Education />
-				<Professional />
-				<Today />
-
-				<footer className=" footer-scene center">
-					<small className="pinstripe">Storybook</small>
-				</footer>
-			</div>
+			<Hero />
+			<Clouds />
+			<About />
+			<Geogrophy />
+			<Biker />
+			<Education />
+			<Professional />
+			<Today />
+			<footer className=" footer-scene center">
+				<small className="pinstripe">Storybook</small>
+			</footer>
 		</div>
 	);
 };
@@ -79,39 +68,10 @@ const Biker = () => {
 				alt=""
 				style={{
 					height: "4rem",
-
-					transform: "translateY(520vh) translateX(-922vw)",
+					transform: "translateY(120vh) translateX(22vw)",
 				}}
 			/>
 		</div>
-	);
-};
-
-const City = () => {
-	return (
-		<>
-			<img
-				src={`${process.env.PUBLIC_URL}/images/buckhead.png`}
-				alt=""
-				style={{
-					height: "29vw",
-					transform: "translateY(-5vh) translateX(-10vw)",
-				}}
-			/>
-		</>
-	);
-};
-
-const Train = () => {
-	return (
-		<img
-			src={`${process.env.PUBLIC_URL}/images/marta.png`}
-			alt=""
-			style={{
-				height: "4rem",
-				transform: "translateY(-3vh) translateX(-260vw)",
-			}}
-		/>
 	);
 };
 

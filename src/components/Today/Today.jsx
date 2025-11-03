@@ -44,7 +44,7 @@ export default function Today() {
 					learning, teaching, and discussing new technologies.
 				</p>
 			</div>
-			{TV.TV2()}
+		
 		</section>
 	);
 }

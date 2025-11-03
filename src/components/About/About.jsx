@@ -51,6 +51,8 @@ export default function About() {
 					alt=""
 					style={{ width: "65vw", height: "auto", maxWidth: "350px" }}
 				/>
+				<small>photo caption here</small>
+				<hr />
 			</div>
 			<p className="storyaParagraph">
 				<div
@@ -84,7 +86,6 @@ export default function About() {
 		</section>
 	);
 }
-
 
 const Polariod = () => {
 	return (
