@@ -46,24 +46,52 @@ const Storybook = () => {
 					start: "top center",
 					end: "bottom center",
 					scrub: 1,
-					
 				},
 			});
 
-
 			const biker = gsap.utils.toArray(".biker");
 			gsap.to(biker, {
-				 x: 150 ,
+				x: 150,
 				scrollTrigger: {
 					trigger: biker,
 					scroller: rootRef.current,
 					start: "top center",
 					end: "bottom center",
 					scrub: 1,
-					
 				},
 			});
+
+			const leftPictures = gsap.utils.toArray(".left-container");
+			const rightPictures = gsap.utils.toArray(".right-container");
+			leftPictures.forEach((picture, index) => {
+				gsap.from(picture, {
+					x: -150,
+					opacity: 0,
+					scrollTrigger: {
+						trigger: picture,
+						scroller: rootRef.current,
+						start: "top bottom",
+						end: "bottom center",
+						scrub: 1,
+					},
+				});
+			});
+
+			rightPictures.forEach((picture, index) => {
+				gsap.from(picture, {
+					x: 50,
+					opacity: 0,
+					scrollTrigger: {
+						trigger: picture,
+						scroller: rootRef.current,
+						start: "top bottom",
+						end: "bottom center",
+						scrub: 1,
+					},
+				});
+			});
 		},
+
 		{ scope: rootRef }
 	);
 
@@ -76,7 +104,7 @@ const Storybook = () => {
 			<Clouds />
 			<About />
 			<Geogrophy />
-		
+
 			<Education />
 			<Professional />
 			<Today />
@@ -86,7 +114,5 @@ const Storybook = () => {
 		</div>
 	);
 };
-
-
 
 export default Storybook;
