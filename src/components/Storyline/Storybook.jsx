@@ -10,74 +10,50 @@ import Education from "../Education/Education";
 import Professional from "../Professional/Professional";
 import Today from "../Today/Today";
 import Clouds from "../Clouds/Clouds";
-import TV from "../TV/TV";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Storybook = () => {
-	const cloudRef = useRef(null);
+	const source = `${process.env.PUBLIC_URL}/images/drawnClouds.png`;
 	const rootRef = useRef(null);
 
 	useGSAP(
 		() => {
-			gsap.to(cloudRef.current, {
-				x: -100 * 2,
-				ease: "",
-				scrollTrigger: {
-					//markers: true,
-					trigger: cloudRef.current,
-					 scroll: cloudRef.current,
-					start: "top center", // starts when cloud is near middle of view
-					end: "bottom+=80 center",
-					scrub: true,
-				},
+			const clouds = gsap.utils.toArray(".cloud");
+			clouds.forEach((cloud, index) => {
+				const direction = index === 0 ? -150 : 150;
+				
+				gsap.to(cloud, {
+					x: direction,
+					ease: "none",
+					scrollTrigger: {
+						trigger: cloud,
+						scroller: rootRef.current,
+						start: "top center",
+						end: "bottom center",
+						scrub: 1,
+						markers: false
+					}
+				});
 			});
 		},
 		{ scope: rootRef }
 	);
 
 	return (
-		<>
+		<div ref={rootRef} className="storybook-root">
 			<div className="progress-container">
 				<div className="progress-bar"></div>
 			</div>
 
-			<div ref={rootRef} className="storybook-root">
-				<div className="bg-layer"></div>
+			<div
+				style={{
+					width: "100%",
+					position: "relative",
+				}}
+			>
 				<Hero />
-
-				<div ref={cloudRef} style={{ width: "100%" }}>
-					<img
-						className="cloud"
-						src="./images/drawnClouds.png"
-						alt=""
-						style={{
-							transform: "translateY(0vh) translateX(10vw)",
-							height: "10rem",
-							width: "18rem",
-						}}
-					/>
-				</div>
-
-				{/* <ParallaxLayer offset={0.1} speed={-1.5} factor={0.1} horizontal={true}>
-					{Clouds.Cloud2()}
-				</ParallaxLayer>
-				<ParallaxLayer offset={0} speed={-1.5} factor={0.1} horizontal={true}>
-					{Clouds.Cloud3()}
-				</ParallaxLayer>
-				<ParallaxLayer offset={0} speed={-1.5} factor={0.1} horizontal={true}>
-					{Clouds.Cloud4()}
-				</ParallaxLayer>
-				<ParallaxLayer offset={0} speed={-1.5} factor={0.1} horizontal={true}>
-					{Clouds.Cloud5()}
-				</ParallaxLayer>
-				<ParallaxLayer offset={0} speed={1.5} factor={0.1} horizontal={true}>
-					{Clouds.Cloud6()}
-				</ParallaxLayer>
-				<ParallaxLayer offset={0} speed={1.5} factor={0.1} horizontal={true}>
-					{Clouds.Cloud7()}
-				</ParallaxLayer> */}
-
+				<Clouds />
 				<City />
 				<Train />
 				<About />
@@ -91,7 +67,7 @@ const Storybook = () => {
 					<small className="pinstripe">Storybook</small>
 				</footer>
 			</div>
-		</>
+		</div>
 	);
 };
 
@@ -110,8 +86,6 @@ const Biker = () => {
 		</div>
 	);
 };
-
-
 
 const City = () => {
 	return (
@@ -135,7 +109,7 @@ const Train = () => {
 			alt=""
 			style={{
 				height: "4rem",
-				transform: "translateY(vh) translateX(-0vw)",
+				transform: "translateY(-3vh) translateX(-260vw)",
 			}}
 		/>
 	);

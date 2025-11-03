@@ -50,7 +50,9 @@ html,
 .storybook-root {
 	font-family: "Helvetica", sans-serif;
 	color: var(--c6);
-	position: relative;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	height: 100vh;
 }
 
 .scene {
@@ -143,10 +145,12 @@ hr {
 }
 
 .cloud {
-	width: 35vw;
+	width: 6rem;
 	height: auto;
-	max-width: 400px;
+	pointer-events: none;
 	will-change: transform;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
 }
 
 .polariod::after {
@@ -180,9 +184,9 @@ hr {
 	text-align: center;
 	font-family: var(--audio-font);
 	font-weight: 400;
-	animation: banner 14s ease-in-out infinite;
+	/* animation: banner 14s ease-in-out infinite; */
 	/* width: 250vw; */
-	transform: translateY(10vh);
+	transform: translateY(20vh);
 }
 
 .storyaParagraph {
@@ -198,7 +202,7 @@ hr {
 	width: 100vw;
 	z-index: -2;
 	overflow-x: hidden;
-	background: var(--bg);
+	/* background: var(--bg); */
 }
 .bg-image {
 	position: absolute;
@@ -244,7 +248,7 @@ hr {
 }
 
 .footer-scene {
-	position: absolute;
+	/* position: absolute; */
 	bottom: 0;
 	left: 0;
 	width: 100%;
@@ -273,9 +277,9 @@ hr {
 
 @keyframes banner {
 	0% {
-		transform: translateX(100%) translateY(-20vh);
+		transform: translateX(100%);
 	}
 	100% {
-		transform: translateX(-100%) translateY(-20vh);
+		transform: translateX(-100%);
 	}
 }
