@@ -1,6 +1,13 @@
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
+
 export default function Hero() {
 	return (
-		<section className="scene hero-scene center" >
+		<section className="scene hero-scene center">
 			<div className="hero-content center">
 				<div
 					className=" circle-border"
@@ -36,7 +43,7 @@ export default function Hero() {
 				</div>
 			</div>
 			<City />
-			<Train />
+			<Train  />
 		</section>
 	);
 }
@@ -59,6 +66,7 @@ const City = () => {
 const Train = () => {
 	return (
 		<img
+			className="train"
 			src={`${process.env.PUBLIC_URL}/images/marta.png`}
 			alt=""
 			style={{

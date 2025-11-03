@@ -36,6 +36,33 @@ const Storybook = () => {
 					},
 				});
 			});
+
+			const train = gsap.utils.toArray(".train");
+			gsap.to(train, {
+				x: 190 * 2,
+				scrollTrigger: {
+					trigger: train,
+					scroller: rootRef.current,
+					start: "top center",
+					end: "bottom center",
+					scrub: 1,
+					
+				},
+			});
+
+
+			const biker = gsap.utils.toArray(".biker");
+			gsap.to(biker, {
+				 x: 150 ,
+				scrollTrigger: {
+					trigger: biker,
+					scroller: rootRef.current,
+					start: "top center",
+					end: "bottom center",
+					scrub: 1,
+					
+				},
+			});
 		},
 		{ scope: rootRef }
 	);
@@ -49,7 +76,7 @@ const Storybook = () => {
 			<Clouds />
 			<About />
 			<Geogrophy />
-			<Biker />
+		
 			<Education />
 			<Professional />
 			<Today />
@@ -60,19 +87,6 @@ const Storybook = () => {
 	);
 };
 
-const Biker = () => {
-	return (
-		<div className="biker">
-			<img
-				src={`${process.env.PUBLIC_URL}/images/biker.png`}
-				alt=""
-				style={{
-					height: "4rem",
-					transform: "translateY(120vh) translateX(22vw)",
-				}}
-			/>
-		</div>
-	);
-};
+
 
 export default Storybook;

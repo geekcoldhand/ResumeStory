@@ -55,8 +55,23 @@ export default function Education() {
 					sunt blanditiis, architecto vero sed!
 				</p>
 			</div>
-
+			<Biker />
 			<Banner />
 		</section>
 	);
 }
+const Biker = () => {
+	return (
+		<div className="biker">
+			<img
+				className="biker"
+				src={`${process.env.PUBLIC_URL}/images/biker.png`}
+				alt=""
+				style={{
+					height: "4rem",
+					transform: "translateY(1vh) translateX(-40vw)",
+				}}
+			/>
+		</div>
+	);
+};
