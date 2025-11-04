@@ -25,7 +25,6 @@ export default function Professional() {
 					containerized, service-oriented architectures that enhance
 					performance, maintainability, and cost efficiency.
 				</p>
-				<br />
 				<p className="storyaParagraph">
 					<div className="right-container">
 						<img
@@ -46,7 +45,6 @@ export default function Professional() {
 					efficient RESTful APIs, and provision infrastructure using
 					Infrastructure-as-Code tools.
 				</p>
-				<br />
 				<p className="storyaParagraph">
 					I'm also passionate about mentoring and teaching, leading a youth
 					mentorship program at Nexus Church in Atlanta, where I teach

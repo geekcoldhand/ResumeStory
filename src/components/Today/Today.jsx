@@ -28,13 +28,12 @@ export default function Today() {
 						/>
 					</div>
 					I discovered a love for embedded programming languages (Java and C++)
-					in high school from my dad.
-					<br />
-					That excitement led to me majoring in Computer Science, growing my
-					focus toward web development. Lorem ipsum dolor sit amet consectetur
-					adipisicing elit. Officia labore nemo sint obcaecati iusto. Optio
-					culpa sunt velit reiciendis eligendi distinctio sint dignissimos
-					aspernatur, natus corrupti, voluptates pariatur voluptatibus debitis?
+					in high school from my dad. That excitement led to me majoring in
+					Computer Science, growing my focus toward web development. Lorem ipsum
+					dolor sit amet consectetur adipisicing elit. Officia labore nemo sint
+					obcaecati iusto. Optio culpa sunt velit reiciendis eligendi distinctio
+					sint dignissimos aspernatur, natus corrupti, voluptates pariatur
+					voluptatibus debitis?
 				</p>
 
 				<p className="storyaParagraph">

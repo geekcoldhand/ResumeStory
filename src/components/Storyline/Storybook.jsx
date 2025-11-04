@@ -11,6 +11,7 @@ import Professional from "../Professional/Professional";
 import Today from "../Today/Today";
 import Clouds from "../Clouds/Clouds";
 import Navbar from "../Navbar/Navbar";
+import Carousel from "../Carousel/Carousel";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -134,6 +135,7 @@ const Storybook = () => {
 			<About />
 			{/* <Geogrophy /> */}
 			<Education />
+			<Carousel />
 			<Professional />
 			<Today />
 			<footer className=" footer-scene center">
