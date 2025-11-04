@@ -6,8 +6,6 @@ const pictureData = [
 ];
 export default Carousel = () => {
     const [items, setItems] = useState(pictureData);
-    const [currentIndex, setCurrentIndex] = useState(0);
-
 	const handleAddItem = () => {
 		setItems([...items, "item"]);
 	};

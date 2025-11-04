@@ -10,16 +10,30 @@ import Education from "../Education/Education";
 import Professional from "../Professional/Professional";
 import Today from "../Today/Today";
 import Clouds from "../Clouds/Clouds";
-import Navbar from "../Navbar/Navbar"
+import Navbar from "../Navbar/Navbar";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Storybook = () => {
-	const source = `${process.env.PUBLIC_URL}/images/drawnClouds.png`;
 	const rootRef = useRef(null);
+	const progressBarRef = useRef(null);
 
 	useGSAP(
 		() => {
+			ScrollTrigger.create({
+				scroller: rootRef.current,
+				start: "top top",
+				end: "bottom bottom",
+				scrub: true,
+				markers: false,
+				onUpdate: (self) => {
+					gsap.to(progressBarRef.current, {
+						width: `${self.progress * 100}%`,
+						duration: 0.1,
+					});
+				},
+			});
+
 			const clouds = gsap.utils.toArray(".cloud");
 			clouds.forEach((cloud, index) => {
 				const direction = index % 2 === 0 ? 150 : -150;
@@ -113,7 +127,7 @@ const Storybook = () => {
 		<div ref={rootRef} className="storybook-root">
 			<Navbar />
 			<div className="progress-container">
-				<div className="progress-bar"></div>
+				<div className="progress-bar" ref={progressBarRef}></div>
 			</div>
 			<Hero />
 			<Clouds />

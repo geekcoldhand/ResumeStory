@@ -33,7 +33,6 @@
 	--helv-font: "Helvetica", sans-serif;
 }
 
-
 .audioFont {
 	font-family: var(--audio-font);
 }
@@ -81,7 +80,7 @@ html,
 	text-align: center;
 }
 .progress-container {
-	position: absolute;
+	position: sticky;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -100,7 +99,7 @@ html,
 		var(--c2) 50%,
 		var(--c1) 100%
 	);
-	transform-origin: left center;
+	transform-origin: left;
 	transform: scaleX(0);
 	box-shadow: 0 2px 8px rgba(46, 62, 95, 0.69);
 }
