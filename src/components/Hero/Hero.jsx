@@ -1,9 +1,3 @@
-import { useRef } from "react";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import gsap from "gsap";
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export default function Hero() {
 	return (
@@ -72,6 +66,7 @@ const Train = () => {
 			style={{
 				height: "4rem",
 				transform: "translateY(27vh) translateX(-192vw)",
+				marginBottom: "2rem",
 			}}
 		/>
 	);

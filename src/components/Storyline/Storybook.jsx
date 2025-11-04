@@ -130,6 +130,7 @@ const Storybook = () => {
 						border: "none",
 						backgroundColor: "var(--c-compliment)",
 						color: "white",
+						marginBlock: "1rem",
 					}}
 					onClick={() =>
 						rootRef.current.scrollTo({ top: 0, behavior: "smooth" })

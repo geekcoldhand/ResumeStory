@@ -1,4 +1,3 @@
-import TV from "../TV/TV";
 
 export default function Today() {
 	return (
@@ -11,20 +10,20 @@ export default function Today() {
 					</h2>
 					<hr />
 				</div>
-				<p className="storyaParagraph">
+				<p className="storyaParagraph dropCap" style={{  }}>
 					I continue to expand my expertise in AWS Cloud Services and explore
 					emerging trends in software development and operations.
 				</p>
-				<br />
+			
 				<p className="storyaParagraph">
 					<div className="left-container">
 						<img
 							className="circle-image"
-							src={`${process.env.PUBLIC_URL}/images/geekwashere.png`}
+							src={`${process.env.PUBLIC_URL}/images/education.png`}
 							alt=""
 							style={{
 								height: "150px",
-								borderRadius: "50%",
+								border: "none",
 								shapeOutside: "circle(50%)",
 							}}
 						/>
@@ -38,7 +37,7 @@ export default function Today() {
 					culpa sunt velit reiciendis eligendi distinctio sint dignissimos
 					aspernatur, natus corrupti, voluptates pariatur voluptatibus debitis?
 				</p>
-				<br />
+			
 				<p className="storyaParagraph">
 					I'm always open to connecting with people who share my passion for
 					learning, teaching, and discussing new technologies.

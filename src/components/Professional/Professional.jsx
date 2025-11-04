@@ -19,7 +19,7 @@ export default function Professional() {
 				>
 					<img src={`${process.env.PUBLIC_URL}/images/hiMyName.png`} alt="" style={{ width: "35vw", height: "auto" }}/>
 				</div> */}
-				<p className="storyaParagraph">
+				<p className="storyaParagraph dropCap">
 					As a Senior Software Engineer at Accenture, I serve as a subject
 					matter expert in transforming monolithic legacy systems into
 					containerized, service-oriented architectures that enhance

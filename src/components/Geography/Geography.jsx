@@ -1,4 +1,3 @@
-import TV from "../TV/TV";
 
 
 export default function Geography() {

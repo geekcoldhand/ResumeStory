@@ -1,4 +1,3 @@
-import Banner from "../Banner/Banner";
 
 export default function Education() {
 	return (
@@ -12,15 +11,16 @@ export default function Education() {
 			</div>
 
 			<div className="education-panel ">
-				<p className="storyaParagraph">
+				<p className="storyaParagraph dropCap">
 					<div className="left-container">
 						<img
-							src={`${process.env.PUBLIC_URL}/images/education.png`}
+							className="circle-image"
+							src={`${process.env.PUBLIC_URL}/images/geekwashere.png`}
 							alt=""
 							style={{
 								width: "150px",
 								height: "150px",
-								borderRadius: "40%",
+								borderRadius: "50%",
 								shapeOutside: "circle(50%), float: left",
 							}}
 						/>
@@ -30,11 +30,11 @@ export default function Education() {
 					itaque atque. Culpa asperiores similique, at aliquam rem unde
 					assumenda ad vero, corrupti provident consequatur! Ratione quas
 					provident vero odio voluptatibus.
-					<br />
-					<br />
+					
+					
 					Full Stack Development certification, Georgia Institute of Technology
 					(MERN stack)
-					<br />
+					
 					<div className="right-container" style={{ marginRight: "1rem" }}>
 						<img
 							className="circle-image"
@@ -68,7 +68,7 @@ const Biker = () => {
 				alt=""
 				style={{
 					height: "4rem",
-					transform: "translateY(1vh) translateX(-40vw)",
+					transform: "translateY(-5vh) translateX(-40vw)",
 				}}
 			/>
 		</div>

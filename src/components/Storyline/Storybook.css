@@ -1,24 +1,26 @@
 @import url("https://fonts.googleapis.com/css?family=Audiowide");
 :root {
-	--c1: #b0c4e8;
+	--c1: #cddbf5;
 	--c2: #7b90b8;
 	--c3: #6476a0;
 	--c4: #3e6194;
 	--c5: #2f5586;
-	--c6: #1b376f;
+	--c6: #152d5b;
 	--c1-mono: #b0c4e8;
 	--c-compliment: #58557f;
-	--c-accent: #805956;
+	--c-accent: #513431;
+	--c-red: #b96e6e;
 	--bg: linear-gradient(
-		50deg,
+		180deg,
 		var(--c1),
-		#eaeaea,
-		rgb(255, 219, 196),
-		#eaeaea,
-		var(--c1)
+		var(--c1),
+		var(--c1),
+		#e3c9c9,
+		#eaeaea
 	);
-	--bg1: linear-gradient(180deg, #eaeaea, #b0c4e8, #eaeaea);
-	--bg2: linear-gradient(
+	--bg1: linear-gradient(180deg, #eaeaea, #eaeaea, #b0c4e8, #eaeaea);
+	--bg2: linear-gradient(180deg, #eaeaea, #eaeaea, var(--c1), #eaeaea);
+	--bg3: linear-gradient(
 		50deg,
 		var(--c1),
 		#eaeaea,
@@ -41,6 +43,10 @@
 .audioFont {
 	font-family: var(--audio-font);
 }
+.dropCap::first-letter {
+	font-size: 1.4rem;
+	color: var(--c-accent);
+}
 
 body,
 html,
@@ -55,10 +61,12 @@ html,
 	overflow-y: scroll;
 	height: 100vh;
 }
-
+small {
+	font-variant: all-small-caps;
+}
 .scene {
 	min-height: 100vh;
-	padding: 3.5rem 1rem;
+	padding: 1.5rem 1rem;
 }
 
 .chapter {
@@ -128,11 +136,11 @@ p {
 
 .circle-border {
 	border-radius: 100%;
-	border: 10px rgb(119, 148, 205) solid;
+	border: 10px var(--c-compliment) solid;
 }
 
 .circle-image {
-	border: 2px solid rgb(62, 97, 148);
+	border: 2px solid var(--c-compliment);
 }
 .left-container {
 	width: 100px;
@@ -198,6 +206,8 @@ p {
 	line-height: 1.7rem;
 	margin-block: 1rem;
 	max-width: 500px;
+	text-align: left;
+	font-variant: all-small-caps;
 }
 
 .hero-scene .hero-content {
@@ -210,12 +220,10 @@ p {
 	z-index: 10;
 }
 .hero-name {
-	font-size: 2.6rem;
+	font-size: 2.8rem;
 	display: inline-block;
 }
-.hero-scene {
-	background: var(--bg);
-}
+
 .pinstripe {
 	font-family: "Verdana", sans-serif;
 	font-weight: 300;
@@ -237,8 +245,14 @@ p {
 	font-size: 2rem;
 	margin-top: 1rem;
 }
+.hero-scene {
+	background: var(--bg);
+	margin-bottom: 3rem;
+}
 .about-me {
-	background: var(--bg1);
+}
+hero .education-scene {
+	background: var(--bg2);
 }
 .footer-scene {
 	position: absolute;
@@ -247,6 +261,7 @@ p {
 	width: 100%;
 	padding: 1rem;
 	text-align: center;
+	padding-bottom: 2rem;
 }
 
 /* mobile first scales */

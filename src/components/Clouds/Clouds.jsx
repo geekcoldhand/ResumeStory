@@ -18,7 +18,7 @@ export default function Clouds() {
 					alt=""
 					style={{
 						position: "absolute",
-						top: "-46vh",
+						top: "-41vh",
 						left: "55vw",
 						width: "200px",
 					}}
@@ -32,8 +32,8 @@ export default function Clouds() {
 					alt=""
 					style={{
 						position: "absolute",
-						top: "-46vh",
-						left: "-5vw",
+						top: "-41vh",
+						left: "-5%",
 						width: "210px",
 						transform: "rotate(180deg)",
 					}}
@@ -47,8 +47,8 @@ export default function Clouds() {
 					alt=""
 					style={{
 						position: "absolute",
-						top: "-39vh",
-						left: "53vw",
+						top: "-34vh",
+						left: "53%",
 						width: "100px",
 						height: "60px",
 					}}
@@ -62,7 +62,7 @@ export default function Clouds() {
 					alt=""
 					style={{
 						position: "absolute",
-						top: "-39vh",
+						top: "-34vh",
 						left: "20vw",
 						width: "120px",
 					}}
@@ -76,7 +76,7 @@ export default function Clouds() {
 					alt=""
 					style={{
 						position: "absolute",
-						top: "-33vh",
+						top: "-28vh",
 						left: "50vw",
 						width: "100px",
 					}}
@@ -89,7 +89,7 @@ export default function Clouds() {
 					alt=""
 					style={{
 						position: "absolute",
-						top: "-37vh",
+						top: "-32vh",
 						left: "-5vw",
 						width: "120px",
 						transform: "rotate(180deg)",
@@ -103,7 +103,7 @@ export default function Clouds() {
 					alt=""
 					style={{
 						position: "absolute",
-						top: "-36vh",
+						top: "-30vh",
 						left: "72vw",
 						width: "100px",
 						height: "60px",
@@ -119,8 +119,8 @@ export default function Clouds() {
 					alt=""
 					style={{
 						position: "absolute",
-						top: "-34vh",
-						left: "28vw",
+						top: "-27vh",
+						left: "25vw",
 						width: "94px",
 						transform: "scaleX(-1)",
 					}}
