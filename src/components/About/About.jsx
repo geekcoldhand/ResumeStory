@@ -1,4 +1,3 @@
-
 export default function About() {
 	return (
 		<section id="about-me" className="scene about-me center">
@@ -67,8 +66,6 @@ export default function About() {
 				dignissimos aspernatur, natus corrupti, voluptates pariatur voluptatibus
 				debitis?
 			</p>
-
-		
 		</section>
 	);
 }

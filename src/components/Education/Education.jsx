@@ -1,4 +1,3 @@
-
 export default function Education() {
 	return (
 		<section className="scene education-scene center">
@@ -29,12 +28,8 @@ export default function Education() {
 					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus,
 					itaque atque. Culpa asperiores similique, at aliquam rem unde
 					assumenda ad vero, corrupti provident consequatur! Ratione quas
-					provident vero odio voluptatibus.
-					
-					
-					Full Stack Development certification, Georgia Institute of Technology
-					(MERN stack)
-					
+					provident vero odio voluptatibus. Full Stack Development
+					certification, Georgia Institute of Technology (MERN stack)
 					<div className="right-container" style={{ marginRight: "1rem" }}>
 						<img
 							className="circle-image"

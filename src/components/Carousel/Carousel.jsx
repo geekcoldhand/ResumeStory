@@ -30,8 +30,8 @@ export default function Carousel() {
 						left: "50%",
 						width: "100px",
 						transform: "translateX(-50%) translateY(-70%)",
-						zIndex: index === currentIndex ? 1 : 0, 
-						transition: "z-index 0.6s ease", 
+						zIndex: index === currentIndex ? 1 : 0,
+						transition: "z-index 0.6s ease",
 					}}
 				/>
 			))}

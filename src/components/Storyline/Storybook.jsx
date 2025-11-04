@@ -1,11 +1,10 @@
 import "./Storybook.css";
-import { use, useRef } from "react";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import Hero from "../Hero/Hero";
 import About from "../About/About";
-import Geogrophy from "../Geography/Geography";
 import Education from "../Education/Education";
 import Professional from "../Professional/Professional";
 import Today from "../Today/Today";
@@ -28,10 +27,9 @@ const Storybook = () => {
 			ScrollTrigger.create({
 				scroller: container,
 				trigger: timelineRef.current,
-				start: "top top", // Start tracking when the top of the container hits the top of the viewport
-				end: "bottom top", // Stop tracking when the bottom of the container hits the top of the viewport
+				start: "top top", 
+				end: "bottom top", 
 				onUpdate: (self) => {
-					console.log(`Scroll Progress: ${Math.round(self.progress * 100)}%`);
 					gsap.to(progressBarRef.current, {
 						scaleX: self.progress + .2,
 						duration: 0.1,
@@ -40,7 +38,7 @@ const Storybook = () => {
 				},
 				scrub: true,
 			});
-			// more code below
+			
 			const clouds = gsap.utils.toArray(".cloud");
 			clouds.forEach((cloud, index) => {
 				const direction = index % 2 === 0 ? 150 : -150;
@@ -140,7 +138,6 @@ const Storybook = () => {
 				<Hero />
 				<Clouds />
 				<About />
-				{/* <Geogrophy /> */}
 				<Education />
 				<Carousel />
 				<Professional />

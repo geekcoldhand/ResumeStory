@@ -1,4 +1,3 @@
-
 export default function Hero() {
 	return (
 		<section className="scene hero-scene center">
@@ -37,7 +36,7 @@ export default function Hero() {
 				</div>
 			</div>
 			<City />
-			<Train  />
+			<Train />
 		</section>
 	);
 }
