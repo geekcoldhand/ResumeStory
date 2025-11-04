@@ -1,6 +1,6 @@
 export default function Professional() {
 	return (
-		<section className="scene career-scene center">
+		<section id="career" className="scene career-scene center">
 			<div className="chapter center">
 				<hr />
 				<h2 className="audioFont xxxl">

@@ -10,6 +10,7 @@ import Education from "../Education/Education";
 import Professional from "../Professional/Professional";
 import Today from "../Today/Today";
 import Clouds from "../Clouds/Clouds";
+import Navbar from "../Navbar/Navbar"
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -110,6 +111,7 @@ const Storybook = () => {
 
 	return (
 		<div ref={rootRef} className="storybook-root">
+			<Navbar />
 			<div className="progress-container">
 				<div className="progress-bar"></div>
 			</div>
