@@ -24,13 +24,19 @@ const Storybook = () => {
 		() => {
 			const container = rootRef.current;
 			console.log(container);
+
 			ScrollTrigger.create({
 				scroller: container,
 				trigger: timelineRef.current,
 				start: "top top", // Start tracking when the top of the container hits the top of the viewport
 				end: "bottom top", // Stop tracking when the bottom of the container hits the top of the viewport
-				onUpdate: ({ progress }) => {
-					console.log(`Scroll Progress: ${Math.round(progress * 100)}%`);
+				onUpdate: (self) => {
+					console.log(`Scroll Progress: ${Math.round(self.progress * 100)}%`);
+					gsap.to(progressBarRef.current, {
+						scaleX: self.progress + .2,
+						duration: 0.1,
+						ease: "none",
+					});
 				},
 				scrub: true,
 			});

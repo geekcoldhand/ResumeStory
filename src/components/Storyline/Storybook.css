@@ -95,8 +95,8 @@ html,
 	width: 100%;
 	background: linear-gradient(
 		90deg,
-		var(--c5) 0%,
-		var(--c2) 50%,
+		var(--c-compliment) 0%,
+		var(--c-compliment) 85%,
 		var(--c1) 100%
 	);
 	transform-origin: left;
