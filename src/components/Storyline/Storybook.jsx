@@ -43,7 +43,7 @@ const Storybook = () => {
 				scrollTrigger: {
 					trigger: train,
 					scroller: rootRef.current,
-					start: "top center",
+					start: "top bottom",
 					end: "bottom center",
 					scrub: 1,
 				},
@@ -55,7 +55,7 @@ const Storybook = () => {
 				scrollTrigger: {
 					trigger: biker,
 					scroller: rootRef.current,
-					start: "top center",
+					start: "top bottom",
 					end: "bottom center",
 					scrub: 1,
 				},
@@ -90,6 +90,19 @@ const Storybook = () => {
 					},
 				});
 			});
+			const chapter = gsap.utils.toArray(".chapter");
+			chapter.forEach((chapter, index) => {
+				gsap.from(chapter, {
+					y: 35,
+					scrollTrigger: {
+						trigger: chapter,
+						scroller: rootRef.current,
+						start: "top 90%",
+						end: "bottom center",
+						scrub: 1,
+					},
+				});
+			});
 		},
 
 		{ scope: rootRef }
@@ -103,12 +116,27 @@ const Storybook = () => {
 			<Hero />
 			<Clouds />
 			<About />
-			<Geogrophy />
-
+			{/* <Geogrophy /> */}
 			<Education />
 			<Professional />
 			<Today />
 			<footer className=" footer-scene center">
+				<button
+					className="pinstripe"
+					style={{
+						fontSize: "0.5rem",
+						padding: "0.5rem",
+						borderRadius: "0.5rem",
+						border: "none",
+						backgroundColor: "var(--c-compliment)",
+						color: "white",
+					}}
+					onClick={() =>
+						rootRef.current.scrollTo({ top: 0, behavior: "smooth" })
+					}
+				>
+					Back To Top
+				</button>
 				<small className="pinstripe">Storybook</small>
 			</footer>
 		</div>

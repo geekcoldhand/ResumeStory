@@ -45,7 +45,7 @@ export default function Geography() {
 				programming.
 			</p>
 
-				{TV.TV1()}
+		
 		</section>
 	);
 }

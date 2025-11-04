@@ -1,9 +1,15 @@
 export default function Professional() {
 	return (
 		<section className="scene career-scene center">
+			<div className="chapter center">
+				<hr />
+				<h2 className="audioFont xxxl">
+					Lorem ipsum dolor sit, amet consectetur
+				</h2>
+				<hr />
+			</div>
 			<div className="career-panel ">
-				
-				<div
+				{/* <div
 					style={{
 						width: "auto",
 						
@@ -12,7 +18,7 @@ export default function Professional() {
 					}}
 				>
 					<img src={`${process.env.PUBLIC_URL}/images/hiMyName.png`} alt="" style={{ width: "35vw", height: "auto" }}/>
-				</div>
+				</div> */}
 				<p className="storyaParagraph">
 					As a Senior Software Engineer at Accenture, I serve as a subject
 					matter expert in transforming monolithic legacy systems into

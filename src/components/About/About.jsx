@@ -93,7 +93,7 @@ const Polariod = () => {
 			style={{
 				width: "100%",
 				height: "75vh",
-				border: "10px solid white",
+				border: "10px solid #363636",
 				transform: "translateY(10vh) translateX(0vw)",
 				maxWidth: "400px",
 			}}

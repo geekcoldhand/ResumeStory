@@ -56,7 +56,6 @@ export default function Education() {
 				</p>
 			</div>
 			<Biker />
-			<Banner />
 		</section>
 	);
 }

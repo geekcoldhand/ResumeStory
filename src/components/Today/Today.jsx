@@ -6,7 +6,7 @@ export default function Today() {
 			<div className="today-panel center">
 				<div className="chapter center">
 					<hr />
-					<h2 className="audioFont xxxl" style={{ color: "aliceblue" }}>
+					<h2 className="audioFont xxxl" style={{  }}>
 						Lorem ipsum dolor sit, amet consectetur
 					</h2>
 					<hr />
