@@ -3,7 +3,7 @@ export default function Education() {
 		<section className="scene education-scene center">
 			<div className="chapter center">
 				<hr />
-				<h2 className="audioFont xxxl">The Scholar Versus The Collar</h2>
+				<h2 className="audioFont xxxl">The Scholar Versus The Dollar</h2>
 				<hr />
 			</div>
 
@@ -22,12 +22,13 @@ export default function Education() {
 							}}
 						/>
 					</div>
-					Bachelor of Science in Computer Science, University of West Georgia
-					Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus,
-					itaque atque. Culpa asperiores similique, at aliquam rem unde
-					assumenda ad vero, corrupti provident consequatur! Ratione quas
-					provident vero odio voluptatibus. Full Stack Development
-					certification, Georgia Institute of Technology (MERN stack)
+					I’ve always been a huge fan of learning. While I believe education is
+					an important foundation for reaching your goals, I’ve noticed higher
+					education is not practical or simply for everyone. I was fortunate to
+					study Computer Science at West Georgia and Kennesaw State University.
+					I completed a Full Stack Development certification at the Georgia Institute
+					of Technology (MERN stack)
+					<br />
 					<div className="right-container" style={{ marginRight: "1rem" }}>
 						<img
 							className="circle-image"
@@ -41,7 +42,7 @@ export default function Education() {
 							}}
 						/>
 					</div>
-					Studied patterns, logic, and problem decomposition. I love systems
+					I studied patterns, logic, and problem decomposition. I love systems
 					that are simple and repeatable. Lorem ipsum dolor sit amet consectetur
 					adipisicing elit. Quaerat repellendus deleniti tempore quasi ea at
 					enim doloremque vel quisquam temporibus nihil doloribus magni totam ex

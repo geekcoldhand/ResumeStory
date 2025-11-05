@@ -39,10 +39,11 @@ export default function Today() {
 				</p>
 
 				<p className="storyaParagraph">
-					I'm always open to connecting with people who share my passion for
-					learning, teaching, and discussing new technologies.
+					I’m writing this autobiography to preserve the memory of who I am and
+					once was. I'm always open to connecting with people who share my
+					passion for learning, teaching, and discussing new technologies.
 					<br />
-					thanks for stopping by!
+					Thanks for stopping by!
 					<br />- H
 				</p>
 			</div>

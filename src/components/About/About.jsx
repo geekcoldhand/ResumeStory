@@ -15,9 +15,9 @@ export default function About() {
 				<hr />
 			</div>
 			<p className="storyaParagraph dropCap">
-				Hey there!
-				My name is Horatious Harris II. I’m writing this autobiography to
-				preserve the memory of who I am and once was. 
+				Dear Reader,
+				<br />
+				My name is Horatious Harris II. 
 				<br />
 				I was born in Stockbridge,
 				GA, but grew up in a few southern Georgia cities. I spent the majority

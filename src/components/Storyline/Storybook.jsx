@@ -88,7 +88,7 @@ const Storybook = () => {
 			const rightPictures = gsap.utils.toArray(".right-container");
 			leftPictures.forEach((picture, index) => {
 				gsap.from(picture, {
-					x: -150,
+					x: -50,
 					opacity: 0,
 					scrollTrigger: {
 						trigger: picture,
@@ -163,7 +163,11 @@ const Storybook = () => {
 					>
 						Back To Top
 					</button>
-					<small className="pinstripe">Storybook</small>
+					<img
+						src={`${process.env.PUBLIC_URL}/images/continued.png`}
+						style={{ height: "1rem" }}
+						alt=""
+					/>
 				</footer>
 			</div>
 		</div>

@@ -37,8 +37,8 @@ export default function Professional() {
 								borderRadius: "50%",
 								shapeOutside: "circle(50%)",
 								objectFit: "contain",
-								marginBottom: "5rem",
-								marginLeft: "1rem",
+								marginBottom: "6rem",
+								marginLeft: "2rem",
 							}}
 						/>
 					</div>

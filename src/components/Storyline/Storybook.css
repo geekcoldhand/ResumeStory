@@ -19,15 +19,10 @@
 		#eaeaea
 	);
 	--bg1: linear-gradient(180deg, #eaeaea, #eaeaea, #b0c4e8, #eaeaea);
-	--bg2: linear-gradient(180deg, #eaeaea, #eaeaea, var(--c1), #eaeaea);
-	--bg3: linear-gradient(
-		50deg,
-		var(--c1),
-		#eaeaea,
-		rgb(255, 219, 196),
-		#eaeaea,
-		var(--c1)
-	);
+	--bg2: linear-gradient(130deg, #eaeaea, #eaeaea, var(--c1), #eaeaea);
+	--bg3: linear-gradient(60deg,  #eaeaea,  #eaeaea, var(--c1), var(--c1),  #eaeaea);
+	--bg4: linear-gradient(120deg,  #eaeaea,  #eaeaea, var(--c1), var(--c1),  #eaeaea);
+	--bg5: linear-gradient(25deg, var(--c1), var(--c1), var(--c1), #eaeaea);
 
 	--audio-font: "Audiowide", sans-serif;
 	--helv-font: "Helvetica", sans-serif;
@@ -238,10 +233,17 @@ html,
 
 .about-me {
 }
+.career-scene {
+	background: var(--bg3);
+}
 .education-scene {
 	background: var(--bg2);
 }
+.today-scene {
+	background: var(--bg4);
+}
 .footer-scene {
+	background: var(--bg5);
 	position: absolute;
 	bottom: 10;
 	left: 0;
