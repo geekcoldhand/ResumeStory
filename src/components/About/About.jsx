@@ -1,7 +1,11 @@
 import Carousel from "../Carousel/Carousel";
 
 export default function About() {
-	const album = [`${process.env.PUBLIC_URL}/images/homeworkHelper.png`];
+	const album = [
+		`${process.env.PUBLIC_URL}/images/homeworkHelper1.png`,
+		`${process.env.PUBLIC_URL}/images/homeworkHelper2.png`,
+		`${process.env.PUBLIC_URL}/images/homeworkHelper.png`,
+	];
 
 	return (
 		<section id="about-me" className="scene about-me center">
@@ -47,7 +51,7 @@ export default function About() {
 			>
 				<Carousel album={album} transY={-80} />
 				<small style={{ transform: "translateY(3rem)" }}>
-					photo caption here
+					Homework Helper in C++
 				</small>
 				<hr />
 			</div>
