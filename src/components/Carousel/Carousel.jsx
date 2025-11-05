@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Carousel({ album }) {
+export default function Carousel({ album, transY }) {
 	const [items, setItems] = useState(album);
 	const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -23,7 +23,7 @@ export default function Carousel({ album }) {
 						top: "10px",
 						left: "50%",
 						height: "120px",
-						transform: "translateX(-50%) translateY(-95%)",
+						transform: `translateX(-50%) translateY(${transY}%)`,
 						zIndex: index === currentIndex ? 1 : 0,
 						transition: "z-index 0.6s ease",
 					}}

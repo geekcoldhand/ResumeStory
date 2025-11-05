@@ -142,7 +142,7 @@ const Storybook = () => {
 				<Clouds />
 				<About />
 				<Education />
-				<Carousel album={pictureData} />
+				<Carousel album={pictureData} transY={-95} />
 				<Professional />
 				<Today />
 				<footer className=" footer-scene center">

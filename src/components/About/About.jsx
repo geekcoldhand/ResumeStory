@@ -1,11 +1,13 @@
+import Carousel from "../Carousel/Carousel";
+
 export default function About() {
+	const album = [`${process.env.PUBLIC_URL}/images/homeworkHelper.png`];
+
 	return (
 		<section id="about-me" className="scene about-me center">
 			<div className="chapter center">
 				<hr />
-				<h2 className="audioFont xxxl">
-					Word Is Born: Hello World
-				</h2>
+				<h2 className="audioFont xxxl">Word Is Born: Hello World</h2>
 				<hr />
 			</div>
 			<p className="storyaParagraph dropCap">
@@ -43,12 +45,10 @@ export default function About() {
 					marginBlock: "3rem",
 				}}
 			>
-				<img
-					src={`${process.env.PUBLIC_URL}/images/homeworkHelper.png`}
-					alt=""
-					style={{ width: "65vw", height: "auto", maxWidth: "350px" }}
-				/>
-				<small>photo caption here</small>
+				<Carousel album={album} transY={-80} />
+				<small style={{ transform: "translateY(3rem)" }}>
+					photo caption here
+				</small>
 				<hr />
 			</div>
 			<p className="storyaParagraph ">
