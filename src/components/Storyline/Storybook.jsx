@@ -6,8 +6,8 @@ import gsap from "gsap";
 import Hero from "../Hero/Hero";
 import About from "../About/About";
 import Education from "../Education/Education";
-import Professional from "../Professional/Professional";
-import Today from "../Today/Today";
+import Professional from "../Today/Today";
+import Today from "../Future/Future";
 import Clouds from "../Clouds/Clouds";
 import Navbar from "../Navbar/Navbar";
 import Carousel from "../Carousel/Carousel";
@@ -142,7 +142,7 @@ const Storybook = () => {
 				<Clouds />
 				<About />
 				<Education />
-				<Carousel album={pictureData} transY={-95} />
+				<Carousel album={pictureData} transY={-80} />
 				<Professional />
 				<Today />
 				<footer className=" footer-scene center">

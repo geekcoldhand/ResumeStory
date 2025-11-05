@@ -61,7 +61,7 @@ const Biker = () => {
 				alt=""
 				style={{
 					height: "4rem",
-					transform: "translateY(-8vh) translateX(-40vw)",
+					transform: "translateY(-9vh) translateX(-40vw)",
 				}}
 			/>
 		</div>

@@ -1,44 +1,56 @@
-export default function Today() {
+export default function Professional() {
 	return (
-		<section id="future" className="scene today-scene center">
-			<div className="today-panel center">
-				<div className="chapter center">
-					<hr />
-					<h2 className="audioFont xxxl" style={{}}>
-						To Infinity and Beyond
-					</h2>
-					<hr />
-				</div>
-				<p className="storyaParagraph dropCap" style={{}}>
-					I continue to expand my expertise in AWS Cloud Services and explore
-					emerging trends in software development and operations.
+		<section id="career" className="scene career-scene center">
+			<div className="chapter center">
+				<hr />
+				<h2 className="audioFont xxxl">GWACH: A Geek With A Cold Hand</h2>
+				<hr />
+			</div>
+			<div className="career-panel ">
+				{/* <div
+					style={{
+						width: "auto",
+						
+						paddingBottom: "2rem",
+						marginBlock: "2rem",
+					}}
+				>
+					<img src={`${process.env.PUBLIC_URL}/images/hiMyName.png`} alt="" style={{ width: "35vw", height: "auto" }}/>
+				</div> */}
+				<p className="storyaParagraph dropCap">
+					Today, I’d say I’m an engineer with a deep passion for culture,
+					storytelling, systems, and building things that feel like the future.
+					By day, I work as an AWS engineer at Accenture, spinning up cloud
+					services and building new fullstack features. As a Senior Software
+					Engineer at Accenture, I serve as a subject matter expert in web
+					application development, with a focus on JavaScript and component
+					development.
 				</p>
-
 				<p className="storyaParagraph">
-					<div className="left-container">
+					<div className="right-container">
 						<img
 							className="circle-image"
-							src={`${process.env.PUBLIC_URL}/images/education.png`}
+							src={`${process.env.PUBLIC_URL}/images/professional.gif`}
 							alt=""
 							style={{
-								height: "150px",
-								border: "none",
+								height: "180px",
+								borderRadius: "50%",
 								shapeOutside: "circle(50%)",
+								objectFit: "contain",
+								marginBottom: "5rem",
+								marginLeft: "1rem",
 							}}
 						/>
 					</div>
-					I discovered a love for embedded programming languages (Java and C++)
-					in high school from my dad. That excitement led to me majoring in
-					Computer Science, growing my focus toward web development. Lorem ipsum
-					dolor sit amet consectetur adipisicing elit. Officia labore nemo sint
-					obcaecati iusto. Optio culpa sunt velit reiciendis eligendi distinctio
-					sint dignissimos aspernatur, natus corrupti, voluptates pariatur
-					voluptatibus debitis?
+					I consistently implement automated CI/CD pipelines, develop secure and
+					efficient RESTful APIs, and provision infrastructure using
+					Infrastructure-as-Code tools.
 				</p>
-
 				<p className="storyaParagraph">
-					I'm always open to connecting with people who share my passion for
-					learning, teaching, and discussing new technologies.
+					I'm also passionate about mentoring and teaching, leading a youth
+					mentorship program at Nexus Church in Atlanta, where I teach
+					foundational programming principles and inspire the next generation of
+					STEM talent.
 				</p>
 			</div>
 		</section>

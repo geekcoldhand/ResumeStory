@@ -16,9 +16,10 @@ export default function About() {
 			</div>
 			<p className="storyaParagraph dropCap">
 				Hey there!
-				<br />
 				My name is Horatious Harris II. I’m writing this autobiography to
-				preserve the memory of who I am and once was. I was born in Stockbridge,
+				preserve the memory of who I am and once was. 
+				<br />
+				I was born in Stockbridge,
 				GA, but grew up in a few southern Georgia cities. I spent the majority
 				of my development in north Atlanta, in Alpharetta. There, my interest in
 				drawing, fashion, engineering, and architecture occupied me with a
@@ -27,11 +28,11 @@ export default function About() {
 				While most of my peers were in sports or summer camps, I was 12 or 13
 				Frankensteining one of my toy conceptions in my parents' basement. I
 				built robot arms, robot R/C cars, soapbox cars, and a few flying
-				contraptions. Some of it worked, most of it didn’t, but that allowed me
+				contraptions. Some of it worked, most of it didn’t, but it allowed me
 				to cultivate an engineering imagination. 
 			</p>
 			<p className="storyaParagraph">
-				I started programming when I was about 14. My dad taught me how to read
+				My dad taught me software engineering when I was about 14. I learned how to read
 				and write C++, and I continued teaching myself with projects. I can
 				remember the first continuous development project I worked on, which I
 				called Homework Helper. It did what the name implied and solved any
@@ -49,8 +50,8 @@ export default function About() {
 					marginBlock: "3rem",
 				}}
 			>
-				<Carousel album={album} transY={-80} />
-				<small style={{ transform: "translateY(3rem)" }}>
+				<Carousel album={album} transY={-50} />
+				<small style={{ transform: "translateY(5rem)" }}>
 					Homework Helper in C++
 				</small>
 				<hr />
