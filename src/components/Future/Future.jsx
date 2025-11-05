@@ -47,6 +47,23 @@ export default function Today() {
 					<br />- H
 				</p>
 			</div>
+			<Train />
 		</section>
 	);
 }
+
+const Train = () => {
+	return (
+		<img
+			className="lastTrain"
+			src={`${process.env.PUBLIC_URL}/images/marta.png`}
+			alt=""
+			style={{
+				height: "4rem",
+				transform: "translateY(5vh) translateX(100vw) scaleX(-1)",
+				marginBottom: "2rem",
+				zIndex: 10,
+			}}
+		/>
+	);
+};

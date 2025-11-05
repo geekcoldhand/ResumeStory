@@ -72,6 +72,18 @@ const Storybook = () => {
 				},
 			});
 
+			const lastTrain = gsap.utils.toArray(".lastTrain");
+			gsap.to(lastTrain, {
+				x: -500 * 4,
+				scrollTrigger: {
+					trigger: lastTrain,
+					scroller: rootRef.current,
+					start: "top bottom",
+					end: "bottom center",
+					scrub: 1,
+				},
+			});
+
 			const biker = gsap.utils.toArray(".biker");
 			gsap.to(biker, {
 				x: 150,
