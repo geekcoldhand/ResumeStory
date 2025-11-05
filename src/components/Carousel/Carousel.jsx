@@ -22,8 +22,8 @@ export default function Carousel({ album }) {
 						position: "absolute",
 						top: "10px",
 						left: "50%",
-						width: "100px",
-						transform: "translateX(-50%) translateY(-85%)",
+						height: "120px",
+						transform: "translateX(-50%) translateY(-95%)",
 						zIndex: index === currentIndex ? 1 : 0,
 						transition: "z-index 0.6s ease",
 					}}

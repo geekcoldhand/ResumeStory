@@ -19,8 +19,10 @@ const Storybook = () => {
 	const progressBarRef = useRef(null);
 	const timelineRef = useRef(null);
 	const pictureData = [
-		`${process.env.PUBLIC_URL}/images/avatar.png`,
-		`${process.env.PUBLIC_URL}/images/geekwashere.png`,
+		`${process.env.PUBLIC_URL}/images/ninja.png`,
+		`${process.env.PUBLIC_URL}/images/oneStop.png`,
+		`${process.env.PUBLIC_URL}/images/soapbox.gif`,
+		`${process.env.PUBLIC_URL}/images/FBLA.png`,
 	];
 	useGSAP(
 		() => {

@@ -3,9 +3,7 @@ export default function Education() {
 		<section className="scene education-scene center">
 			<div className="chapter center">
 				<hr />
-				<h2 className="audioFont xxxl">
-					Lorem ipsum dolor sit, amet consectetur
-				</h2>
+				<h2 className="audioFont xxxl">The Scholar Versus The Collar</h2>
 				<hr />
 			</div>
 

@@ -4,24 +4,34 @@ export default function About() {
 			<div className="chapter center">
 				<hr />
 				<h2 className="audioFont xxxl">
-					Lorem ipsum dolor sit, amet consectetur
+					Word Is Born: Hello World
 				</h2>
 				<hr />
 			</div>
 			<p className="storyaParagraph dropCap">
-				Hello!
+				Hey there!
 				<br />
-				I'm a Senior Software Engineer with over seven years of experience
-				delivering scalable, cloud-native applications across both front-end and
-				back-end systems. I focus on full-stack development, specializing in
-				cloud computing, microservices architecture, and modern DevOps
-				practices.
+				My name is Horatious Harris II. I’m writing this autobiography to
+				preserve the memory of who I am and once was. I was born in Stockbridge,
+				GA, but grew up in a few southern Georgia cities. I spent the majority
+				of my development in north Atlanta, in Alpharetta. There, my interest in
+				drawing, fashion, engineering, and architecture occupied me with a
+				project.
+				<br />
+				While most of my peers were in sports or summer camps, I was 12 or 13
+				Frankensteining one of my toy conceptions in my parents' basement. I
+				built robot arms, robot R/C cars, soapbox cars, and a few flying
+				contraptions. Some of it worked, most of it didn’t, but that allowed me
+				to cultivate an engineering imagination. 
 			</p>
 			<p className="storyaParagraph">
-				I hold a Bachelor of Science in Computer Science from the University of
-				West Georgia and a Full Stack Development certification from the Georgia
-				Institute of Technology, with a focus on the MERN stack. Lorem ipsum
-				dolor sit, amet consectetur adipisicing elit.
+				I started programming when I was about 14. My dad taught me how to read
+				and write C++, and I continued teaching myself with projects. I can
+				remember the first continuous development project I worked on, which I
+				called Homework Helper. It did what the name implied and solved any
+				equations from Math and Science from 7th - 9th grade.
+				<br />
+				<br />
 			</p>
 
 			<div
@@ -58,13 +68,13 @@ export default function About() {
 						}}
 					/>
 				</div>
-				I discovered a love for embedded programming languages (Java and C++) in
-				high school from my dad. That excitement led to me majoring in Computer
-				Science, growing my focus toward web development. Lorem ipsum dolor sit
-				amet consectetur adipisicing elit. Officia labore nemo sint obcaecati
-				iusto. Optio culpa sunt velit reiciendis eligendi distinctio sint
-				dignissimos aspernatur, natus corrupti, voluptates pariatur voluptatibus
-				debitis?
+				I learned early on the importance of version control as I was mass
+				emailing my C++ files every night to myself. More than ever, Homework
+				Helper taught me how to create value from my intellect. What began as a
+				selfish homework algorithm grew into arriving early to the school
+				library and distributing that digital value to waiting students. From
+				then on, I felt the gravity of what the one-to-many relationship of
+				software can do.
 			</p>
 		</section>
 	);

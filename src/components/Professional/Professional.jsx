@@ -4,7 +4,7 @@ export default function Professional() {
 			<div className="chapter center">
 				<hr />
 				<h2 className="audioFont xxxl">
-					Lorem ipsum dolor sit, amet consectetur
+					GWACH: A Geek With A Cold Hand
 				</h2>
 				<hr />
 			</div>

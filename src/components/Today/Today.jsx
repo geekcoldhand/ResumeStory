@@ -5,7 +5,7 @@ export default function Today() {
 				<div className="chapter center">
 					<hr />
 					<h2 className="audioFont xxxl" style={{}}>
-						Lorem ipsum dolor sit, amet consectetur
+						To Infinity and Beyond
 					</h2>
 					<hr />
 				</div>
