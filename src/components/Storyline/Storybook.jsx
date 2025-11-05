@@ -18,30 +18,31 @@ const Storybook = () => {
 	const rootRef = useRef(null);
 	const progressBarRef = useRef(null);
 	const timelineRef = useRef(null);
-
+	const pictureData = [
+		`${process.env.PUBLIC_URL}/images/avatar.png`,
+		`${process.env.PUBLIC_URL}/images/geekwashere.png`,
+	];
 	useGSAP(
 		() => {
-			const container = rootRef.current;
-			console.log(container);
-
+			const scrubber = rootRef.current;
 			ScrollTrigger.create({
-				scroller: container,
+				scroller: scrubber,
 				trigger: timelineRef.current,
-				start: "top top", 
-				end: "bottom top", 
+				start: "top top",
+				end: "bottom top",
 				onUpdate: (self) => {
 					gsap.to(progressBarRef.current, {
-						scaleX: self.progress + .2,
+						scaleX: self.progress + 0.1,
 						duration: 0.1,
 						ease: "none",
 					});
 				},
 				scrub: true,
 			});
-			
+
 			const clouds = gsap.utils.toArray(".cloud");
 			clouds.forEach((cloud, index) => {
-				const direction = index % 2 === 0 ? 150 : -150;
+				const direction = index % 2 === 0 ? 50 : -50;
 
 				gsap.to(cloud, {
 					x: direction,
@@ -59,7 +60,7 @@ const Storybook = () => {
 
 			const train = gsap.utils.toArray(".train");
 			gsap.to(train, {
-				x: 190 * 2,
+				x: 100 * 2,
 				scrollTrigger: {
 					trigger: train,
 					scroller: rootRef.current,
@@ -139,7 +140,7 @@ const Storybook = () => {
 				<Clouds />
 				<About />
 				<Education />
-				<Carousel />
+				<Carousel album={pictureData} />
 				<Professional />
 				<Today />
 				<footer className=" footer-scene center">
@@ -155,7 +156,7 @@ const Storybook = () => {
 							marginBlock: "1rem",
 						}}
 						onClick={() =>
-							rootRef.current.scrollTo({ top: 0, behavior: "smooth" })
+							rootRef.current.scrollTo({ top: -2, behavior: "smooth" })
 						}
 					>
 						Back To Top

@@ -64,7 +64,7 @@ const Train = () => {
 			alt=""
 			style={{
 				height: "4rem",
-				transform: "translateY(27vh) translateX(-192vw)",
+				transform: "translateY(27vh) translateX(-260vw)",
 				marginBottom: "2rem",
 			}}
 		/>
