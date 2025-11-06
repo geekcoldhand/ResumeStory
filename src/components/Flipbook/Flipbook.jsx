@@ -4,55 +4,47 @@ import "./Flipbook.css";
 export default function FlipBook({ images, coverTitle, coverDescription }) {
 	const containerRef = useRef();
 	const [stackIdx, setStackIdx] = useState(0);
+	const [pages, setPages] = useState([]);
 	const [zIdxCount, setZIdxCounter] = useState(1);
 
 	useEffect(() => {
 		if (containerRef.current) {
-			const rightEls = containerRef.current.querySelectorAll(".right");
-			setStackIdx(rightEls.length);
+			const rightEls = containerRef.current.querySelectorAll(".right"); 
+			setPages(rightEls);
+			setStackIdx(rightEls.length); 
 		}
 	}, []);
 
 	const handleRightTurn = () => {
-		const rightEls = containerRef.current.querySelectorAll(".right");
-		let nextIndex = stackIdx - 1;
-
-		if (nextIndex >= 0) {
-			rightEls[nextIndex].classList.add("flip");
-			rightEls[nextIndex].style.zIndex = zIdxCount + 1;
-			setStackIdx(nextIndex);
-			setZIdxCounter(zIdxCount + 1);
+		if (stackIdx >= 1) {
+			setStackIdx(stackIdx - 1);
 		} else {
-			// reset
-			rightEls.forEach((el) => {
+			setStackIdx(pages.length - 1);
+			pages.forEach((el) => {
 				el.className = "right";
 				setTimeout(() => {
 					el.style.zIndex = "auto";
 				}, 300);
+				setZIdxCounter(1);
 			});
-			setStackIdx(rightEls.length);
-			setZIdxCounter(1);
 		}
+		pages[stackIdx].classList.add("flip");
+		setZIdxCounter(zIdxCount + 1);
+		pages[stackIdx].style.zIndex = zIdxCount;
 	};
 
 	const handleLeftTurn = () => {
-		const rightEls = containerRef.current.querySelectorAll(".right");
-		if (stackIdx === images.length) return;
-
-		let nextIndex = stackIdx + 1;
-
-		if (nextIndex <= images.length) {
-			rightEls[stackIdx].className = "right";
-			setTimeout(() => (rightEls[stackIdx].style.zIndex = "auto"), 350);
-			setStackIdx(nextIndex);
+		if (stackIdx < pages.length) {
+			setStackIdx(stackIdx + 1);
 		} else {
-			// flip all back
-			for (let i = images.length - 1; i >= 0; i--) {
-				rightEls[i].classList.add("flip");
-				rightEls[i].style.zIndex = images.length + 1 - i;
-			}
-			setStackIdx(rightEls.length);
+			setStackIdx(1);
+			pages.forEach((el, idx) => {
+				pages(idx).classList.add("flip");
+				pages(idx).style.zIndex = pages.length + 1 - idx;
+			});
 		}
+		pages[stackIdx - 1].className = "right";
+		setTimeout(() => (pages[stackIdx - 1].style.zIndex = "auto"), 350);
 	};
 
 	return (
@@ -66,7 +58,6 @@ export default function FlipBook({ images, coverTitle, coverDescription }) {
 					<figure class="front"></figure>
 				</div>
 				{images.map((img, i) => {
-					const isLastPage = i === images.length - 1;
 					return (
 						<div class="right" key={i}>
 							<figure

@@ -1,3 +1,45 @@
+:root {
+	--c1: #cddbf5;
+	--c2: #7b90b8;
+	--c3: #6476a0;
+	--c4: #3e6194;
+	--c5: #2f5586;
+	--c6: #152d5b;
+	--c1-mono: #b0c4e8;
+	--c-compliment: #58557f;
+	--c-accent: #513431;
+	--c-red: #b96e6e;
+	--bg: linear-gradient(
+		180deg,
+		var(--c1),
+		var(--c1),
+		var(--c1),
+		#d6d6d6,
+		#eaeaea
+	);
+	--bg1: linear-gradient(180deg, #eaeaea, #eaeaea, #b0c4e8, #eaeaea);
+	--bg2: linear-gradient(130deg, #eaeaea, #eaeaea, var(--c1), #eaeaea);
+	--bg3: linear-gradient(
+		60deg,
+		#eaeaea,
+		#eaeaea,
+		var(--c1),
+		var(--c1),
+		#eaeaea
+	);
+	--bg4: linear-gradient(
+		120deg,
+		#eaeaea,
+		#eaeaea,
+		var(--c1),
+		var(--c1),
+		#eaeaea
+	);
+	--bg5: linear-gradient(25deg, var(--c1), var(--c1), var(--c1), #eaeaea);
+
+	--audio-font: "Audiowide", sans-serif;
+	--helv-font: "Helvetica", sans-serif;
+}
 .book-section {
 	display: flex;
 	height: fit-content;
@@ -8,7 +50,7 @@
 	align-items: center;
 }
 .book-section > .container {
-	height: 60vh;
+	height: 40vh;
 	width: 100%;
 	position: relative;
 	/* left: 50%; */
@@ -89,15 +131,15 @@
 }
 .book-section > p > a {
 	text-decoration: none;
-	color: #ef9f00;
+	color: var(--c6);
 }
 .book-section > button:hover {
-	background-color: #ef9f00;
+	background-color: var(--c-compliment);
 	color: #fff;
 }
 .front#cover,
 .back#back-cover {
-	background-color: #ffcb63;
+	background-color: var(--c-compliment);
 	font-family: calibri;
 	text-align: left;
 	padding: 0 30px;

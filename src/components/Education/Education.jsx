@@ -6,7 +6,8 @@ export default function Education() {
 			back: `${process.env.PUBLIC_URL}/images/oneStop.png`,
 		},
 		{
-			front: `${process.env.PUBLIC_URL}/images/oneStop.png`,
+			front:
+				"This is some text. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
 			back: `${process.env.PUBLIC_URL}/images/soapbox.gif`,
 		},
 	];
@@ -14,7 +15,9 @@ export default function Education() {
 		<section className="scene education-scene center">
 			<div className="chapter center">
 				<hr />
-				<h2 className="audioFont xxxl">The Ink Scholar Versus Labor of a Dollar</h2>
+				<h2 className="audioFont xxxl">
+					The Ink Scholar Versus Labor of a Dollar
+				</h2>
 				<hr />
 			</div>
 
