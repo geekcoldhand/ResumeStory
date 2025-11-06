@@ -19,10 +19,10 @@ const Storybook = () => {
 	const progressBarRef = useRef(null);
 	const timelineRef = useRef(null);
 	const pictureData = [
-		`${process.env.PUBLIC_URL}/images/ninja.png`,
-		`${process.env.PUBLIC_URL}/images/oneStop.png`,
-		`${process.env.PUBLIC_URL}/images/soapbox.gif`,
-		`${process.env.PUBLIC_URL}/images/FBLA.png`,
+		`${process.env.PUBLIC_URL}/images/ninja.png`,  //second image in book
+		`${process.env.PUBLIC_URL}/images/oneStop.png`, //on cover and back of book
+		`${process.env.PUBLIC_URL}/images/soapbox.gif`, // first image in book
+		`${process.env.PUBLIC_URL}/images/FBLA.png`,  //last image in book
 	];
 	useGSAP(
 		() => {
@@ -74,13 +74,15 @@ const Storybook = () => {
 
 			const lastTrain = gsap.utils.toArray(".lastTrain");
 			gsap.to(lastTrain, {
-				x: -500 * 4,
+				x: -500*4,
+				
 				scrollTrigger: {
 					trigger: lastTrain,
 					scroller: rootRef.current,
-					start: "top bottom",
+					start: "top 88%",
 					end: "bottom center",
 					scrub: 1,
+					duration: 2,
 				},
 			});
 
