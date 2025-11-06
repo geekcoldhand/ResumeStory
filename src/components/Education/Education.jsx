@@ -6,8 +6,7 @@ export default function Education() {
 			back: `${process.env.PUBLIC_URL}/images/oneStop.png`,
 		},
 		{
-			front:
-				"This is some text. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+			front: `${process.env.PUBLIC_URL}/images/robotArm.png`,
 			back: `${process.env.PUBLIC_URL}/images/soapbox.gif`,
 		},
 	];
@@ -16,7 +15,7 @@ export default function Education() {
 			<div className="chapter center">
 				<hr />
 				<h2 className="audioFont xxxl">
-					The Ink Scholar Versus Labor of a Dollar
+					The Ink of a Scholar; Hustle of a Dollar
 				</h2>
 				<hr />
 			</div>
@@ -36,12 +35,15 @@ export default function Education() {
 							}}
 						/>
 					</div>
-					I’ve always been a huge fan of learning. While I believe education is
-					an important foundation for reaching your goals, I’ve noticed higher
-					education is not practical or simply for everyone. I was fortunate to
-					study Computer Science at West Georgia and Kennesaw State University.
-					I completed a Full Stack Development certification at the Georgia
-					Institute of Technology (MERN stack)
+					If you’ve ever taken a personality test, you know how unpredictable
+					they can be. That is true for most tests; however, I found myself
+					strongly resonating with my results from the Briggs Type Analysis
+					test. When I first took the Briggs Type Indicator, I didn’t expect
+					much. My results indicated I am an INTJ, characterized by independent
+					and analytical thinking. One particular attribute I found highly
+					congruent was the focus on logic and education, and a preference for
+					long-term planning. This explains my affinity for creating curricula
+					and implementing them in iterations.
 					<br />
 					<div className="right-container" style={{ marginRight: "1rem" }}>
 						<img
@@ -56,11 +58,24 @@ export default function Education() {
 							}}
 						/>
 					</div>
-					I studied patterns, logic, and problem decomposition. I love systems
-					that are simple and repeatable. Lorem ipsum dolor sit amet consectetur
-					adipisicing elit. Quaerat repellendus deleniti tempore quasi ea at
-					enim doloremque vel quisquam temporibus nihil doloribus magni totam ex
-					sunt blanditiis, architecto vero sed!
+					<br />
+					There’s no doubt in my mind that education is important, and at the
+					same time, there’s no doubt that the American education system and
+					curriculum need a refresher. While I believe education is an important
+					foundation for reaching your goals, I’ve noticed that higher education
+					isn't practical or accessible to everyone. I was fortunate to study 3
+					years of Computer Science at the University of West Georgia on the
+					Dean's list. In my 4th year, I made a tough decision to not return to
+					campus that fall. I still think about that day. I think that was one
+					of the single most important decisions in my life up until that point.
+					<br />
+					<br />
+					Looking back, I believe that I made the right decision not to return
+					in the fall. I continued my education in software engineering while
+					working various full-time jobs in the fashion, food, and retail
+					industries. Eventually, I was accepted into the Georgia Institute of
+					Technology bootcamp and earned my Full Stack Development
+					certification.
 				</p>
 			</div>
 			<Biker />

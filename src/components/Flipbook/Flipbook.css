@@ -58,6 +58,7 @@
 	border-radius: 2%;
 	margin-bottom: 30px;
 	perspective: 1200px;
+	max-width: 600px;
 }
 .container > .right {
 	position: absolute;
@@ -140,14 +141,16 @@
 .front#cover,
 .back#back-cover {
 	background-color: var(--c-compliment);
-	font-family: calibri;
-	text-align: left;
 	padding: 0 30px;
 }
 .front#cover h1 {
 	color: #fff;
+	padding-top: 3rem;
+	font-family: cursive;
+	text-align: center;
 }
-.front#cover p {
+.front#cover small {
 	color: rgba(0, 0, 0, 0.8);
 	font-size: 14px;
+	text-align: center;
 }

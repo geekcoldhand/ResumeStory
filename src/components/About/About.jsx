@@ -17,30 +17,19 @@ export default function About() {
 			<p className="storyaParagraph dropCap">
 				Dear Reader,
 				<br />
-				My name is Horatious Harris II. 
+				My name is Horatious Harris II.
 				<br />
-				I was born in Stockbridge,
-				GA, but grew up in a few southern Georgia cities. I spent the majority
-				of my development in north Atlanta, in Alpharetta. There, my interest in
-				drawing, fashion, engineering, and architecture occupied me with a
-				project.
+				I was born in Stockbridge, GA, but grew up in a few southern Georgia
+				cities. I spent the majority of my development in north Atlanta, in
+				Alpharetta. There, my interest in drawing, fashion, engineering, and
+				architecture occupied me with a project.
 				<br />
 				While most of my peers were in sports or summer camps, I was 12 or 13
 				Frankensteining one of my toy conceptions in my parents' basement. I
 				built robot arms, robot R/C cars, soapbox cars, and a few flying
-				contraptions. Some of it worked, most of it didn’t, but it allowed me
-				to cultivate an engineering imagination. 
+				contraptions. Some of it worked, most of it didn’t, but it allowed me to
+				cultivate an engineering imagination. 
 			</p>
-			<p className="storyaParagraph">
-				My dad taught me software engineering when I was about 14. I learned how to read
-				and write C++, and I continued teaching myself with projects. I can
-				remember the first continuous development project I worked on, which I
-				called Homework Helper. It did what the name implied and solved any
-				equations from Math and Science from 7th - 9th grade.
-				<br />
-				<br />
-			</p>
-
 			<div
 				className="center"
 				style={{
@@ -56,6 +45,14 @@ export default function About() {
 				</small>
 				<hr />
 			</div>
+			<p className="storyaParagraph">
+				My dad taught me software engineering when I was about 14. I learned how
+				to read and write C++, and I continued teaching myself with projects. I
+				can remember the first continuous development project I worked on, which
+				I called Homework Helper. It did what the name implied and solved any
+				equations from Math and Science from 7th - 9th grade.
+			</p>
+
 			<p className="storyaParagraph ">
 				<div
 					className="right-container"

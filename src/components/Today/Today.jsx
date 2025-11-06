@@ -27,7 +27,7 @@ export default function Professional() {
 					development.
 				</p>
 				<p className="storyaParagraph">
-					<div className="right-container">
+					<div className="right-container" style={{height: "140px"}}>
 						<img
 							className="circle-image"
 							src={`${process.env.PUBLIC_URL}/images/professional.gif`}
