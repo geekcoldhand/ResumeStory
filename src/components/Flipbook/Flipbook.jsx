@@ -9,73 +9,91 @@ export default function FlipBook({ images, coverTitle, coverDescription }) {
 
 	useEffect(() => {
 		if (containerRef.current) {
-			const rightEls = containerRef.current.querySelectorAll(".right"); 
+			const rightEls = containerRef.current.querySelectorAll(".right");
 			setPages(rightEls);
-			setStackIdx(rightEls.length); 
+			setStackIdx(rightEls.length);
 		}
 	}, []);
 
 	const handleRightTurn = () => {
-		if (stackIdx >= 1) {
-			setStackIdx(stackIdx - 1);
+		const rightEls = containerRef.current?.querySelectorAll(".right");
+		if (!rightEls || rightEls.length === 0) return;
+		setPages(rightEls);
+
+		const nextIndex = stackIdx - 1;
+
+		if (nextIndex >= 0) {
+			if (rightEls[nextIndex]) {
+				rightEls[nextIndex].classList.add("flip");
+				rightEls[nextIndex].style.zIndex = zIdxCount + 1;
+				setZIdxCounter(zIdxCount + 1);
+			}
+			setStackIdx(nextIndex);
 		} else {
-			setStackIdx(pages.length - 1);
-			pages.forEach((el) => {
+			rightEls.forEach((el) => {
 				el.className = "right";
 				setTimeout(() => {
 					el.style.zIndex = "auto";
 				}, 300);
-				setZIdxCounter(1);
 			});
+			setStackIdx(rightEls.length);
+			setZIdxCounter(1);
 		}
-		pages[stackIdx].classList.add("flip");
-		setZIdxCounter(zIdxCount + 1);
-		pages[stackIdx].style.zIndex = zIdxCount;
 	};
 
 	const handleLeftTurn = () => {
-		if (stackIdx < pages.length) {
-			setStackIdx(stackIdx + 1);
+		const rightEls = containerRef.current?.querySelectorAll(".right");
+		if (!rightEls || rightEls.length === 0) return;
+		setPages(rightEls);
+
+		if (stackIdx === rightEls.length) return;
+
+		const nextIndex = stackIdx + 1;
+
+		if (nextIndex <= rightEls.length) {
+			if (rightEls[stackIdx - 1]) {
+				rightEls[stackIdx - 1].className = "right";
+				setTimeout(() => (rightEls[stackIdx - 1].style.zIndex = "auto"), 350);
+			}
+			setStackIdx(nextIndex);
 		} else {
+			for (let i = rightEls.length - 1; i >= 0; i--) {
+				rightEls[i].classList.add("flip");
+				rightEls[i].style.zIndex = rightEls.length + 1 - i;
+			}
 			setStackIdx(1);
-			pages.forEach((el, idx) => {
-				pages(idx).classList.add("flip");
-				pages(idx).style.zIndex = pages.length + 1 - idx;
-			});
 		}
-		pages[stackIdx - 1].className = "right";
-		setTimeout(() => (pages[stackIdx - 1].style.zIndex = "auto"), 350);
 	};
 
 	return (
-		<div class="book-section">
+		<div className="book-section">
 			<button className="button" onClick={handleLeftTurn}>
 				⇠
 			</button>
-			<div class="container" ref={containerRef}>
-				<div class="right">
-					<figure class="back" id="back-cover"></figure>
-					<figure class="front"></figure>
+			<div className="container" ref={containerRef}>
+				<div className="right">
+					<figure className="back" id="back-cover"></figure>
+					<figure className="front"></figure>
 				</div>
 				{images.map((img, i) => {
 					return (
-						<div class="right" key={i}>
+						<div className="right" key={i}>
 							<figure
-								class="back"
+								className="back"
 								style={{ backgroundImage: `url(${img.back})` }}
 							></figure>
 							<figure
-								class="front"
+								className="front"
 								style={{ backgroundImage: `url(${img.front})` }}
 							></figure>
 						</div>
 					);
 				})}
-				<div class="right">
-					<figure class="back"></figure>
-					<figure class="front" id="cover">
+				<div className="right">
+					<figure className="back"></figure>
+					<figure className="front" id="cover">
 						<h1>{coverTitle}</h1>
-						<small> {coverDescription}</small>
+						<small>{coverDescription}</small>
 					</figure>
 				</div>
 			</div>
