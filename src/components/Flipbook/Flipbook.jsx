@@ -1,10 +1,17 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import "./Flipbook.css";
 
 export default function FlipBook({ images }) {
 	const containerRef = useRef();
-	const [stackIdx, setStackIdx] = useState(images.length);
+	const [stackIdx, setStackIdx] = useState(0);
 	const [zIdxCount, setZIdxCounter] = useState(1);
+
+	useEffect(() => {
+		if (containerRef.current) {
+			const rightEls = containerRef.current.querySelectorAll(".right");
+			setStackIdx(rightEls.length);
+		}
+	}, []);
 
 	const handleRightTurn = () => {
 		const rightEls = containerRef.current.querySelectorAll(".right");
@@ -31,6 +38,7 @@ export default function FlipBook({ images }) {
 
 	const handleLeftTurn = () => {
 		const rightEls = containerRef.current.querySelectorAll(".right");
+		if (stackIdx === images.length) return;
 
 		let nextIndex = stackIdx + 1;
 
@@ -55,22 +63,23 @@ export default function FlipBook({ images }) {
 					<figure class="back" id="back-cover"></figure>
 					<figure class="front"></figure>
 				</div>
-				<div class="right">
-					<figure class="back"></figure>
-					<figure class="front"></figure>
-				</div>
-				<div class="right">
-					<figure class="back"></figure>
-					<figure class="front"></figure>
-				</div>
-				<div class="right">
-					<figure class="back"></figure>
-					<figure class="front"></figure>
-				</div>
-				<div class="right">
-					<figure class="back"></figure>
-					<figure class="front"></figure>
-				</div>
+
+				{images.map((img, i) => {
+					const isLastPage = i === images.length - 1;
+					return (
+						<div class="right" key={i}>
+							<figure
+								class="back"
+								style={{ backgroundImage: `url(${img.back})` }}
+							></figure>
+							<figure
+								class="front"
+								style={{ backgroundImage: `url(${img.front})` }}
+							></figure>
+						</div>
+					);
+				})}
+
 				<div class="right">
 					<figure class="back"></figure>
 					<figure class="front" id="cover">
@@ -89,63 +98,6 @@ export default function FlipBook({ images }) {
 			<button className="button" onClick={handleRightTurn}>
 				Next
 			</button>
-
-			{/* <style>{`
-				.flip {
-					transform: rotateY(-180deg) !important;
-				}
-				.flip::before {
-					content: "";
-					position: absolute;
-					top: 0;
-					left: 0;
-					z-index: 10;
-					width: 100%;
-					height: 100%;
-					border-radius: 0 10px 10px 0;
-					background-color: rgba(0,0,0,0.1);
-
-				.front#cover, .back#back-cover{
-            		background-color: #ffcb63;
-            		font-family: calibri;
-            		text-align: left;
-            		padding: 0 30px;
-       				 }
-       			 .front#cover h1{
-            		color: #fff;
-					margin: 10px 0;}
-      
-					.front#cover p{
-            color: rgba(0,0,0,0.8);
-            font-size: 14px;
-        }
-				}
-			`}</style> */}
 		</div>
 	);
 }
-
-// const styles = {
-// 	figure: {
-// 		margin: 0,
-// 		height: "100%",
-// 		width: "100%",
-// 		position: "absolute",
-// 		top: 0,
-// 		left: 0,
-// 		backgroundSize: "200%",
-// 		backgroundRepeat: "no-repeat",
-// 		backfaceVisibility: "hidden",
-// 		overflow: "hidden",
-// 	},
-// 	button: {
-// 		border: "2px solid #ef9f00",
-// 		backgroundColor: "transparent",
-// 		color: "#ef9f00",
-// 		padding: "10px 20px",
-// 		borderRadius: "5px",
-// 		cursor: "pointer",
-// 		margin: "10px",
-// 		transition: "0.3s ease-in-out",
-// 	},
-// };
