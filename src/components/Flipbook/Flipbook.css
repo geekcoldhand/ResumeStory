@@ -1,22 +1,18 @@
-body {
-	margin: 0;
-	background-color: #ffecc6;
-}
-* {
-	box-sizing: border-box;
-}
 .book-section {
+	display: flex;
 	height: fit-content;
-	width: 100%;
+	width: 100vw;
 	padding: 40px 0;
 	text-align: center;
+	justify-content: center;
+	align-items: center;
 }
 .book-section > .container {
-	height: 400px;
-	width: 500px;
+	height: 60vh;
+	width: 100%;
 	position: relative;
-	left: 50%;
-	transform: translateX(-50%);
+	/* left: 50%; */
+	/* transform: translateX(-50%); */
 	border-radius: 2%;
 	margin-bottom: 30px;
 	perspective: 1200px;
@@ -73,10 +69,10 @@ body {
 	background-color: rgba(0, 0, 0, 0.1);
 }
 .book-section > button {
-	border: 2px solid #ef9f00;
+	border: 2px solid #232323;
 	background-color: transparent;
-	color: #ef9f00;
-	padding: 10px 20px;
+	color: #1f1f1e;
+	padding: 4px 5px;
 	border-radius: 5px;
 	cursor: pointer;
 	margin: 10px;

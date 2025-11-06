@@ -1,9 +1,20 @@
+import Flipbook from "../Flipbook/Flipbook";
 export default function Education() {
+	const pictureData = [
+		{
+			front: `${process.env.PUBLIC_URL}/images/ninja.png`,
+			back: `${process.env.PUBLIC_URL}/images/oneStop.png`,
+		},
+		{
+			front: `${process.env.PUBLIC_URL}/images/oneStop.png`,
+			back: `${process.env.PUBLIC_URL}/images/soapbox.gif`,
+		},
+	];
 	return (
 		<section className="scene education-scene center">
 			<div className="chapter center">
 				<hr />
-				<h2 className="audioFont xxxl">The Scholar Versus The Dollar</h2>
+				<h2 className="audioFont xxxl">The Ink Scholar Versus Labor of a Dollar</h2>
 				<hr />
 			</div>
 
@@ -26,8 +37,8 @@ export default function Education() {
 					an important foundation for reaching your goals, I’ve noticed higher
 					education is not practical or simply for everyone. I was fortunate to
 					study Computer Science at West Georgia and Kennesaw State University.
-					I completed a Full Stack Development certification at the Georgia Institute
-					of Technology (MERN stack)
+					I completed a Full Stack Development certification at the Georgia
+					Institute of Technology (MERN stack)
 					<br />
 					<div className="right-container" style={{ marginRight: "1rem" }}>
 						<img
@@ -50,6 +61,11 @@ export default function Education() {
 				</p>
 			</div>
 			<Biker />
+			<Flipbook
+				images={pictureData}
+				coverTitle="Memories"
+				coverDescription="2012-2018"
+			/>
 		</section>
 	);
 }

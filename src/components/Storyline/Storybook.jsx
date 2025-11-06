@@ -10,7 +10,6 @@ import Professional from "../Today/Today";
 import Today from "../Future/Future";
 import Clouds from "../Clouds/Clouds";
 import Navbar from "../Navbar/Navbar";
-import Carousel from "../Carousel/Carousel";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -18,12 +17,7 @@ const Storybook = () => {
 	const rootRef = useRef(null);
 	const progressBarRef = useRef(null);
 	const timelineRef = useRef(null);
-	const pictureData = [
-		`${process.env.PUBLIC_URL}/images/ninja.png`,  //second image in book
-		`${process.env.PUBLIC_URL}/images/oneStop.png`, //on cover and back of book
-		`${process.env.PUBLIC_URL}/images/soapbox.gif`, // first image in book
-		`${process.env.PUBLIC_URL}/images/FBLA.png`,  //last image in book
-	];
+
 	useGSAP(
 		() => {
 			const scrubber = rootRef.current;
@@ -156,7 +150,6 @@ const Storybook = () => {
 				<Clouds />
 				<About />
 				<Education />
-				<Carousel album={pictureData} transY={-80} />
 				<Professional />
 				<Today />
 				<footer className=" footer-scene center">

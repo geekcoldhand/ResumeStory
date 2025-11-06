@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import "./Flipbook.css";
 
-export default function FlipBook({ images }) {
+export default function FlipBook({ images, coverTitle, coverDescription }) {
 	const containerRef = useRef();
 	const [stackIdx, setStackIdx] = useState(0);
 	const [zIdxCount, setZIdxCounter] = useState(1);
@@ -15,7 +15,6 @@ export default function FlipBook({ images }) {
 
 	const handleRightTurn = () => {
 		const rightEls = containerRef.current.querySelectorAll(".right");
-
 		let nextIndex = stackIdx - 1;
 
 		if (nextIndex >= 0) {
@@ -58,12 +57,14 @@ export default function FlipBook({ images }) {
 
 	return (
 		<div class="book-section">
+			<button className="button" onClick={handleLeftTurn}>
+				⇠
+			</button>
 			<div class="container" ref={containerRef}>
 				<div class="right">
 					<figure class="back" id="back-cover"></figure>
 					<figure class="front"></figure>
 				</div>
-
 				{images.map((img, i) => {
 					const isLastPage = i === images.length - 1;
 					return (
@@ -79,24 +80,16 @@ export default function FlipBook({ images }) {
 						</div>
 					);
 				})}
-
 				<div class="right">
 					<figure class="back"></figure>
 					<figure class="front" id="cover">
-						<h1>Horatious</h1>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-							Adipisci, modi.
-						</p>
+						<h1>{coverTitle}</h1>
+						<small> {coverDescription}</small>
 					</figure>
 				</div>
 			</div>
-
-			<button className="button" onClick={handleLeftTurn}>
-				Prev
-			</button>
 			<button className="button" onClick={handleRightTurn}>
-				Next
+				⇢
 			</button>
 		</div>
 	);
