@@ -30,7 +30,7 @@ export default function FlipBook({ images, coverTitle, coverDescription }) {
 					el.style.zIndex = "auto";
 				}, 300);
 			});
-			setStackIdx(images.length);
+			setStackIdx(rightEls.length);
 			setZIdxCounter(1);
 		}
 	};
@@ -51,7 +51,7 @@ export default function FlipBook({ images, coverTitle, coverDescription }) {
 				rightEls[i].classList.add("flip");
 				rightEls[i].style.zIndex = images.length + 1 - i;
 			}
-			setStackIdx(1);
+			setStackIdx(rightEls.length);
 		}
 	};
 
