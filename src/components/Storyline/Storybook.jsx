@@ -68,12 +68,12 @@ const Storybook = () => {
 
 			const lastTrain = gsap.utils.toArray(".lastTrain");
 			gsap.to(lastTrain, {
-				x: -500*4,
+				x: -420,
 				
 				scrollTrigger: {
 					trigger: lastTrain,
 					scroller: rootRef.current,
-					start: "top 88%",
+					start: "top 89%",
 					end: "bottom center",
 					scrub: 1,
 					duration: 2,

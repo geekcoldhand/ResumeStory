@@ -3,7 +3,7 @@ export default function Education() {
 	const pictureData = [
 		{
 			front: `${process.env.PUBLIC_URL}/images/ninja.png`,
-			back: `${process.env.PUBLIC_URL}/images/oneStop.png`,
+			back: `${process.env.PUBLIC_URL}/images/lego.png`,
 		},
 		{
 			front: `${process.env.PUBLIC_URL}/images/robotArm.png`,
@@ -45,6 +45,17 @@ export default function Education() {
 					long-term planning. This explains my affinity for creating curricula
 					and implementing them in iterations.
 					<br />
+					<br />
+					There’s no doubt in my mind that education is important, and at the
+					same time, there’s no doubt that the American education system and
+					curriculum need a refresher. While I believe education is an important
+					foundation for reaching your goals, I’ve noticed that higher education
+					isn't practical or accessible to everyone. I was fortunate to study 3
+					years of Computer Science at the University of West Georgia on the
+					Dean's list. In my 4th year, I made a tough decision to not return to
+					campus that fall. I still think about that day. I think that was one
+					of the single most important decisions in my life up until that point.
+					<br />
 					<div className="right-container" style={{ marginRight: "1rem" }}>
 						<img
 							className="circle-image"
@@ -59,18 +70,7 @@ export default function Education() {
 						/>
 					</div>
 					<br />
-					There’s no doubt in my mind that education is important, and at the
-					same time, there’s no doubt that the American education system and
-					curriculum need a refresher. While I believe education is an important
-					foundation for reaching your goals, I’ve noticed that higher education
-					isn't practical or accessible to everyone. I was fortunate to study 3
-					years of Computer Science at the University of West Georgia on the
-					Dean's list. In my 4th year, I made a tough decision to not return to
-					campus that fall. I still think about that day. I think that was one
-					of the single most important decisions in my life up until that point.
-					<br />
-					<br />
-					Looking back, I believe that I made the right decision not to return
+					Looking back, I believe that I made the right decision not returning
 					in the fall. I continued my education in software engineering while
 					working various full-time jobs in the fashion, food, and retail
 					industries. Eventually, I was accepted into the Georgia Institute of
