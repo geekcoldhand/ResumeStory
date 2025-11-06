@@ -6,8 +6,12 @@ export default function Education() {
 			back: `${process.env.PUBLIC_URL}/images/lego.png`,
 		},
 		{
-			front: `${process.env.PUBLIC_URL}/images/robotArm.png`,
+			front: `${process.env.PUBLIC_URL}/images/onStage.gif`,
 			back: `${process.env.PUBLIC_URL}/images/soapbox.gif`,
+		},
+		{
+			front: `${process.env.PUBLIC_URL}/images/FBLA.png`,
+			back: `${process.env.PUBLIC_URL}/images/oneStop.png`,
 		},
 	];
 	return (

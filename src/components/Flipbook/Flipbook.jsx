@@ -46,7 +46,8 @@ export default function FlipBook({ images, coverTitle, coverDescription }) {
 		if (!rightEls || rightEls.length === 0) return;
 		setPages(rightEls);
 
-		if (stackIdx === rightEls.length) return;
+		if (stackIdx >= rightEls.length) return;
+		if (stackIdx <= 0) return;
 
 		const nextIndex = stackIdx + 1;
 
@@ -56,12 +57,6 @@ export default function FlipBook({ images, coverTitle, coverDescription }) {
 				setTimeout(() => (rightEls[stackIdx - 1].style.zIndex = "auto"), 350);
 			}
 			setStackIdx(nextIndex);
-		} else {
-			for (let i = rightEls.length - 1; i >= 0; i--) {
-				rightEls[i].classList.add("flip");
-				rightEls[i].style.zIndex = rightEls.length + 1 - i;
-			}
-			setStackIdx(1);
 		}
 	};
 
@@ -71,27 +66,30 @@ export default function FlipBook({ images, coverTitle, coverDescription }) {
 				⇠
 			</button>
 			<div className="container" ref={containerRef}>
+				{/* back cover first */}
 				<div className="right">
-					<figure className="back" id="back-cover"></figure>
+					<figure id="back-cover" className="back"></figure>
 					<figure className="front"></figure>
 				</div>
-				{images.map((img, i) => {
-					return (
-						<div className="right" key={i}>
-							<figure
-								className="back"
-								style={{ backgroundImage: `url(${img.back})` }}
-							></figure>
-							<figure
-								className="front"
-								style={{ backgroundImage: `url(${img.front})` }}
-							></figure>
-						</div>
-					);
-				})}
+
+				{/* reverse the order for correct stacking */}
+				{[...images].reverse().map((img, i) => (
+					<div className="right" key={i}>
+						<figure
+							className="back"
+							style={{ backgroundImage: `url(${img.back})` }}
+						></figure>
+						<figure
+							className="front"
+							style={{ backgroundImage: `url(${img.front})` }}
+						></figure>
+					</div>
+				))}
+
+				{/* cover last (top of stack) */}
 				<div className="right">
-					<figure className="back"></figure>
-					<figure className="front" id="cover">
+					<figure className="back"> </figure>
+					<figure id="cover" className="front">
 						<h1>{coverTitle}</h1>
 						<small>{coverDescription}</small>
 					</figure>
